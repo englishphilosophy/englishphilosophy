@@ -1,0 +1,20 @@
+---
+id: Hume
+author:
+  forename: David
+  surname: Hume
+  birth: 1711
+  death: 1776
+  published: 1739
+  nationality: Scottish
+  sex: Male
+texts:
+  - Hume.THN
+  - Hume.A
+  - Hume.EWU
+  - Hume.LG
+  - Hume.ETSS
+  - Hume.HE
+  - Hume.MOL
+  - Hume.DNR
+---
