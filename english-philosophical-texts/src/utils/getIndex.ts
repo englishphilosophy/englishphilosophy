@@ -1,5 +1,6 @@
 import { compile } from "@englishphilosophy/markit";
 import type { Author, Index } from "../types.ts";
+import getPath, { textsDir } from "./getPath.ts";
 
 export default async (): Promise<Index> => {
   if (cachedIndex) return cachedIndex;
@@ -7,15 +8,15 @@ export default async (): Promise<Index> => {
   const id = "index";
   const publisher = "English Philosophical Texts";
 
-  const [index] = await compile("./texts/index.mit", {
-    contextDirectory: "./texts",
-  });
+  const path = await getPath("index");
+  const options = { contextDirectory: textsDir };
+  const [index] = await compile(path!, options);
 
   const children = await Promise.all(
     index.children!.map(async (author) => {
-      const authorPath = `./texts/${author.id.toLowerCase()}/index.mit`;
-      const options = { contextDirectory: "./texts" };
-      const [text] = await compile(authorPath, options);
+      const authorPath = await getPath(author.id);
+      const options = { contextDirectory: textsDir };
+      const [text] = await compile(authorPath!, options);
       return text as Author;
     }),
   );

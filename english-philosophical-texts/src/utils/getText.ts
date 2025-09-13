@@ -1,7 +1,7 @@
+import { normalize } from "@englishphilosophy/dictionary";
 import { compile, type Format } from "@englishphilosophy/markit";
 import type { Text } from "../types.ts";
-import getPath from "../utils/getPath.ts";
-import { normalize } from "@englishphilosophy/dictionary";
+import getPath, { textsDir } from "../utils/getPath.ts";
 
 export default async (
   id: string,
@@ -12,7 +12,7 @@ export default async (
 
   if (path) {
     const [first] = await compile(path, {
-      contextDirectory: "./texts",
+      contextDirectory: textsDir,
       format,
     });
 
