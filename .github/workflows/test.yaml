@@ -1,0 +1,60 @@
+name: Test
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Test dictionary
+        working-directory: ./dictionary
+        run: deno task test
+
+      - name: Test markit
+        working-directory: ./markit
+        run: deno task test
+
+      - name: Test english-philosophical-texts
+        working-directory: ./english-philosophical-texts
+        run: deno task test
+
+      - name: Lint dictionary
+        working-directory: ./dictionary
+        run: deno task lint
+
+      - name: Lint markit
+        working-directory: ./markit
+        run: deno task lint
+
+      - name: Lint english-philosophical-texts
+        working-directory: ./english-philosophical-texts
+        run: deno task lint
+
+      - name: Format dictionary
+        working-directory: ./dictionary
+        run: deno task fmt
+
+      - name: Format markit
+        working-directory: ./markit
+        run: deno task fmt
+
+      - name: Format english-philosophical-texts
+        working-directory: ./english-philosophical-texts
+        run: deno task fmt
