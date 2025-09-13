@@ -4,9 +4,9 @@
   "license": "MIT",
   "exports": "./mod.ts",
   "tasks": {
-    "dev": "PORT=3000 deno run --watch --allow-env --allow-read --allow-net bin/serve.ts",
+    "dev": "PORT=3000 TEXTS_DIR=./texts deno run --watch --allow-env --allow-read --allow-net bin/serve.ts",
     "start": "deno run --allow-env --allow-read --allow-net bin/serve.ts",
-    "test": "deno test --allow-run --allow-net --allow-read",
+    "test": "deno test --allow-run --allow-env --allow-net --allow-read",
     "test:watch": "deno task test --watch",
     "lint": "deno lint",
     "lint:watch": "deno task lint --watch",
