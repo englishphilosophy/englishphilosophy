@@ -1,0 +1,40 @@
+name: Test
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        project: [dictionary, markit, english-philosophical-texts]
+        
+    name: ${{ matrix.project }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+      
+      - name: Install Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+          cache: true
+      
+      - name: Run tests
+        working-directory: ./${{ matrix.project }}
+        run: deno task test
+      
+      - name: Run linter
+        working-directory: ./${{ matrix.project }}
+        run: deno task lint
+      
+      - name: Check formatting
+        working-directory: ./${{ matrix.project }}
+        run: deno task fmt

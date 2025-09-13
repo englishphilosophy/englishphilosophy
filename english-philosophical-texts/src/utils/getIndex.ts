@@ -13,9 +13,9 @@ export default async (): Promise<Index> => {
 
   const children = await Promise.all(
     index.children!.map(async (author) => {
-      const [text] = await compile(`./texts/${author.id}/index.mit`, {
-        contextDirectory: "./texts",
-      });
+      const authorPath = `./texts/${author.id.toLowerCase()}/index.mit`;
+      const options = { contextDirectory: "./texts" };
+      const [text] = await compile(authorPath, options);
       return text as Author;
     }),
   );
