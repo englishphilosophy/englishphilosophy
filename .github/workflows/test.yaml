@@ -7,54 +7,80 @@ on:
     branches: ["main"]
 
 jobs:
-  test:
-    name: Test
+  dictionary:
+    name: dictionary
     runs-on: ubuntu-latest
-
     permissions:
       contents: read
-
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
-
+      
       - name: Install Deno
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
-
-      - name: Test dictionary
+      
+      - name: Run tests
         working-directory: ./dictionary
         run: deno task test
-
-      - name: Test markit
-        working-directory: ./markit
-        run: deno task test
-
-      - name: Test english-philosophical-texts
-        working-directory: ./english-philosophical-texts
-        run: deno task test
-
-      - name: Lint dictionary
+      
+      - name: Run linter
         working-directory: ./dictionary
         run: deno task lint
-
-      - name: Lint markit
-        working-directory: ./markit
-        run: deno task lint
-
-      - name: Lint english-philosophical-texts
-        working-directory: ./english-philosophical-texts
-        run: deno task lint
-
-      - name: Format dictionary
+      
+      - name: Check formatting
         working-directory: ./dictionary
         run: deno task fmt
 
-      - name: Format markit
+  markit:
+    name: markit
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+      
+      - name: Install Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      
+      - name: Run tests
+        working-directory: ./markit
+        run: deno task test
+      
+      - name: Run linter
+        working-directory: ./markit
+        run: deno task lint
+      
+      - name: Check formatting
         working-directory: ./markit
         run: deno task fmt
 
-      - name: Format english-philosophical-texts
+  english-philosophical-texts:
+    name: english-philosophical-texts
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+      
+      - name: Install Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      
+      - name: Run tests
+        working-directory: ./english-philosophical-texts
+        run: deno task test
+      
+      - name: Run linter
+        working-directory: ./english-philosophical-texts
+        run: deno task lint
+      
+      - name: Check formatting
         working-directory: ./english-philosophical-texts
         run: deno task fmt
