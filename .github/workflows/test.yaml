@@ -7,11 +7,16 @@ on:
     branches: ["main"]
 
 jobs:
-  dictionary:
-    name: dictionary
+  test:
+    strategy:
+      matrix:
+        project: [dictionary, markit, english-philosophical-texts]
+        
+    name: ${{ matrix.project }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
+    
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
@@ -23,67 +28,13 @@ jobs:
           cache: true
       
       - name: Run tests
-        working-directory: ./dictionary
+        working-directory: ./${{ matrix.project }}
         run: deno task test
       
       - name: Run linter
-        working-directory: ./dictionary
+        working-directory: ./${{ matrix.project }}
         run: deno task lint
       
       - name: Check formatting
-        working-directory: ./dictionary
-        run: deno task fmt
-
-  markit:
-    name: markit
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - name: Clone repository
-        uses: actions/checkout@v4
-      
-      - name: Install Deno
-        uses: denoland/setup-deno@v2
-        with:
-          deno-version: v2.x
-          cache: true
-      
-      - name: Run tests
-        working-directory: ./markit
-        run: deno task test
-      
-      - name: Run linter
-        working-directory: ./markit
-        run: deno task lint
-      
-      - name: Check formatting
-        working-directory: ./markit
-        run: deno task fmt
-
-  english-philosophical-texts:
-    name: english-philosophical-texts
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - name: Clone repository
-        uses: actions/checkout@v4
-      
-      - name: Install Deno
-        uses: denoland/setup-deno@v2
-        with:
-          deno-version: v2.x
-          cache: true
-      
-      - name: Run tests
-        working-directory: ./english-philosophical-texts
-        run: deno task test
-      
-      - name: Run linter
-        working-directory: ./english-philosophical-texts
-        run: deno task lint
-      
-      - name: Check formatting
-        working-directory: ./english-philosophical-texts
+        working-directory: ./${{ matrix.project }}
         run: deno task fmt
