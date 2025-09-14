@@ -1,45 +1,10 @@
-import { assert, assertEquals } from "@std/assert";
+import { assertEquals } from "@std/assert";
 import { test } from "@std/testing/bdd";
 import client from "../src/client.ts";
 import server from "../src/server.ts";
-import { validateText } from "./utils/validators.ts";
 
 const baseURL = await server();
 const { get } = client(baseURL);
-
-test("`/texts/:author/:text` returns text", async () => {
-  const { payload } = await get("/texts");
-
-  for (const child of payload.data.children) {
-    const { payload } = await get(`/texts/${child.id}`);
-
-    if ("error" in payload) {
-      throw new Error(`Error fetching author ${child.id}: ${payload.error}`);
-    }
-
-    for (const text of payload.data.children) {
-      const path = text.id.replace(".", "/") as `${string}/${string}`;
-      const { response, payload } = await get(`/texts/${path}`);
-
-      if ("error" in payload) {
-        throw new Error(`Error fetching text ${text.id}: ${payload.error}`);
-      }
-
-      assertEquals(payload.data.id, text.id);
-      assert(
-        validateText(payload.data),
-        `Text ${text.id} is invalid: ${
-          JSON.stringify(
-            validateText.errors,
-            null,
-            2,
-          )
-        }`,
-      );
-      assertEquals(response.status, 200);
-    }
-  }
-});
 
 test("`/texts/:author/:text` returns text in html format", async () => {
   const expectedText =

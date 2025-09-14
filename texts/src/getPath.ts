@@ -1,6 +1,6 @@
 import { exists } from "@std/fs";
 
-export const textsDir = Deno.env.get("TEXTS_DIR") ?? "./texts";
+export const textsDir = Deno.env.get("TEXTS_DIR") ?? "./data";
 
 export default async (id: string): Promise<string | undefined> => {
   const idPath = id.replaceAll(".", "/").toLowerCase();

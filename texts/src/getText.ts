@@ -1,7 +1,7 @@
 import { normalize } from "@englishphilosophy/dictionary";
 import { compile, type Format } from "@englishphilosophy/markit";
-import type { Text } from "../types.ts";
-import getPath, { textsDir } from "../utils/getPath.ts";
+import getPath, { textsDir } from "./getPath.ts";
+import type { Text } from "./types.ts";
 
 export default async (
   id: string,

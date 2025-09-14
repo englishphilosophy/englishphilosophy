@@ -1,5 +1,5 @@
 import { compile } from "@englishphilosophy/markit";
-import type { Author, Index } from "../types.ts";
+import type { Author, Index } from "./types.ts";
 import getPath, { textsDir } from "./getPath.ts";
 
 export default async (): Promise<Index> => {

@@ -2,7 +2,8 @@
   "workspace": [
     "./dictionary",
     "./english-philosophical-texts",
-    "./markit"
+    "./markit",
+    "./texts"
   ],
   "lock": false,
   "imports": {

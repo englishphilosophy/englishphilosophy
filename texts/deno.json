@@ -1,0 +1,18 @@
+{
+  "name": "@englishphilosophy/texts",
+  "version": "0.0.1",
+  "license": "MIT",
+  "exports": "./mod.ts",
+  "tasks": {
+    "test": "deno test --allow-env --allow-run --allow-read",
+    "test:watch": "deno task test --watch",
+    "lint": "deno lint",
+    "lint:watch": "deno task lint --watch",
+    "fmt": "deno fmt --check",
+    "fmt:watch": "deno task fmt --watch",
+    "fmt:fix": "deno fmt"
+  },
+  "imports": {
+    "ajv": "npm:ajv@^8.17.1"
+  }
+}
