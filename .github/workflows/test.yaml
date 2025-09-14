@@ -10,7 +10,7 @@ jobs:
   test:
     strategy:
       matrix:
-        project: [dictionary, markit, english-philosophical-texts]
+        project: [dictionary, english-philosophical-texts, markit, texts]
         
     name: ${{ matrix.project }}
     runs-on: ubuntu-latest
