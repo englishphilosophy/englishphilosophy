@@ -1,5 +1,5 @@
+import { getPath } from "@englishphilosophy/texts";
 import getMatches from "../utils/getMatches.ts";
-import getPath from "../utils/getPath.ts";
 import getRegex from "../utils/getRegex.ts";
 import response from "../utils/response.ts";
 

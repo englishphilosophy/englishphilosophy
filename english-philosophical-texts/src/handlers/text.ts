@@ -1,4 +1,4 @@
-import getText from "../utils/getText.ts";
+import { getText } from "@englishphilosophy/texts";
 import response from "../utils/response.ts";
 
 export default async (

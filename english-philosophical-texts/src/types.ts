@@ -1,8 +1,4 @@
-import type {
-  Block as MarkitBock,
-  Markit,
-  Stub,
-} from "@englishphilosophy/markit";
+import type { Author, Block, Index, Text } from "@englishphilosophy/texts";
 
 export type Client = {
   get: <Path extends string>(
@@ -29,55 +25,4 @@ export type Payload<Path extends string> = Path extends "/"
 
 export type Healthcheck = {
   status: string;
-};
-
-export type Index = {
-  id: "index";
-  publisher: "English Philosophical Texts";
-  children: Author[];
-};
-
-export type Author = Markit<AuthorData, TextData, BlockData>;
-
-export type Text = Markit<TextData, TextData, BlockData> & {
-  ancestors: [AuthorStub, ...TextStub[]];
-  next?: AuthorStub | TextStub;
-  previous?: AuthorStub | TextStub;
-};
-
-export type AuthorStub = Stub<AuthorData>;
-
-export type TextStub = Stub<TextData>;
-
-export type Block = MarkitBock<BlockData>;
-
-export type AuthorData = {
-  author: AuthorDetails;
-};
-
-export type AuthorDetails = {
-  forename: string;
-  surname: string;
-  title?: string;
-  birth: number;
-  death: number;
-  published: number;
-  nationality: string;
-  sex: string;
-};
-
-export type TextData = {
-  imported?: boolean;
-  title: string;
-  author: AuthorDetails;
-  breadcrumb: string;
-  published?: number[];
-  copytext?: number[];
-  sourceUrl?: string;
-  sourceDesc?: string;
-};
-
-export type BlockData = {
-  pages?: string;
-  speaker?: string;
 };

@@ -1,12 +1,9 @@
-import { compile } from "@englishphilosophy/markit";
-import type { Block } from "../types.ts";
-import getPath from "./getPath.ts";
+import { type Block, getText } from "@englishphilosophy/texts";
 
 const getMatches = async (id: string, exp: RegExp): Promise<Block[]> => {
-  const path = await getPath(id);
-  if (!path) return [];
+  const text = await getText(id, "text");
+  if (!text) return [];
 
-  const [text] = await compile(path, { format: "text" });
   const matches = getMatchedBlocks(text.blocks, exp);
 
   for (const child of text.children) {

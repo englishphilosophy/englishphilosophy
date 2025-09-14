@@ -4,17 +4,14 @@
   "license": "MIT",
   "exports": "./mod.ts",
   "tasks": {
-    "dev": "PORT=3000 TEXTS_DIR=./texts deno run --watch --allow-env --allow-read --allow-net bin/serve.ts",
+    "dev": "PORT=3000 TEXTS_DIR=../texts/data deno run --watch --allow-env --allow-read --allow-net bin/serve.ts",
     "start": "deno run --allow-env --allow-read --allow-net bin/serve.ts",
-    "test": "deno test --allow-run --allow-env --allow-net --allow-read",
+    "test": "TEXTS_DIR=../texts/data deno test --allow-run --allow-env --allow-net --allow-read",
     "test:watch": "deno task test --watch",
     "lint": "deno lint",
     "lint:watch": "deno task lint --watch",
     "fmt": "deno fmt --check",
     "fmt:watch": "deno task fmt --watch",
     "fmt:fix": "deno fmt"
-  },
-  "imports": {
-    "ajv": "npm:ajv@^8.17.1"
   }
 }
