@@ -19,16 +19,8 @@ export default async (path: string): Promise<Response> => {
       };
       return new Response(content as Uint8Array<ArrayBuffer>, { headers });
     }
-    case ".js": // fallthrough
-    case ".jsx": // fallthrough
-    case ".ts": // fallthrough
-    case ".tsx": {
-      const result = await Deno.bundle({
-        entrypoints: [baseDir + path],
-        platform: "browser",
-        minify: true,
-      });
-      const content = result.outputFiles![0].text();
+    case ".js": {
+      const content = await Deno.readTextFile(baseDir + "/.build" + path);
       const headers = {
         "Content-Type": "text/javascript",
         length: `${content.length}`,

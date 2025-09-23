@@ -23,7 +23,7 @@ const handler = () => (request: Request) => {
     if (pathname === "/favicon.ico") return file("/static/favicon.ico");
     if (pathname === "/leviathan.webp") return file("/static/leviathan.webp");
     if (pathname === "/screen.css") return file("/static/screen.css");
-    if (pathname === "/index.js") return file("/src/client/index.ts");
+    if (pathname === "/index.js") return file("/index.js");
 
     // static pages
     if (pathname === "/") return index(searchParams);
