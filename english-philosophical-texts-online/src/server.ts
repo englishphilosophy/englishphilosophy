@@ -20,9 +20,9 @@ const handler = () => (request: Request) => {
 
   try {
     // assets
-    if (pathname === "/favicon.ico") return file("/static/favicon.ico");
-    if (pathname === "/leviathan.webp") return file("/static/leviathan.webp");
-    if (pathname === "/screen.css") return file("/static/screen.css");
+    if (pathname === "/favicon.ico") return file("/favicon.ico");
+    if (pathname === "/leviathan.webp") return file("/leviathan.webp");
+    if (pathname === "/screen.css") return file("/screen.css");
     if (pathname === "/index.js") return file("/index.js");
 
     // static pages
