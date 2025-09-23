@@ -1,13 +1,32 @@
 import { type Block, getText } from "@englishphilosophy/texts";
+import { getVariants } from "@englishphilosophy/dictionary";
 
-const getMatches = async (id: string, exp: RegExp): Promise<Block[]> => {
+type SearchOptions = TextSearchOptions | RegexSearchOptions;
+
+type TextSearchOptions = {
+  query: string;
+  ignorePunctuation: boolean;
+  caseInsensitive: boolean;
+  wholeWords: boolean;
+  variantSpellings: boolean;
+};
+
+type RegexSearchOptions = {
+  regex: RegExp;
+};
+
+const getMatches = async (
+  id: string,
+  options: SearchOptions,
+): Promise<Block[]> => {
   const text = await getText(id, "text");
   if (!text) return [];
 
-  const matches = getMatchedBlocks(text.blocks, exp);
+  const regex = "regex" in options ? options.regex : getRegex(options);
+  const matches = getMatchedBlocks(text.blocks, regex);
 
   for (const child of text.children) {
-    const childMatches = await getMatches(child.id, exp);
+    const childMatches = await getMatches(child.id, { regex });
     matches.push(...childMatches);
   }
 
@@ -16,12 +35,27 @@ const getMatches = async (id: string, exp: RegExp): Promise<Block[]> => {
 
 export default getMatches;
 
-const getMatchedBlocks = (blocks: Block[], exp: RegExp) =>
+const getRegex = (options: TextSearchOptions): RegExp => {
+  const flags = options.caseInsensitive ? "gi" : "g";
+
+  const basePattern = options.query
+    .split(/\s/)
+    .map((part) =>
+      options.variantSpellings ? `(${getVariants(part).join("|")})` : part
+    )
+    .join("\\s+");
+
+  const pattern = options.wholeWords ? `\\b${basePattern}\\b` : basePattern;
+
+  return new RegExp(`(${pattern})`, flags);
+};
+
+const getMatchedBlocks = (blocks: Block[], regex: RegExp) =>
   blocks
-    .filter((block) => block.text.match(exp))
+    .filter((block) => block.text.match(regex))
     .map((block) => ({
       ...block,
-      text: exp.flags.includes("g")
-        ? block.text.replaceAll(exp, "<mark>$1</mark>")
-        : block.text.replace(exp, "<mark>$1</mark>"),
+      text: regex.flags.includes("g")
+        ? block.text.replaceAll(regex, "<mark>$1</mark>")
+        : block.text.replace(regex, "<mark>$1</mark>"),
     }));

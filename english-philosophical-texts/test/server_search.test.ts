@@ -13,7 +13,7 @@ test("`/search/:author/:text` requires query or regex", async () => {
     throw new Error("Expected error response to `/search/astell`");
   }
 
-  assertEquals(payload.error, "No search parameters provided.");
+  assertEquals(payload.error, "No query or regex provided.");
   assertEquals(response.status, 400);
 });
 
