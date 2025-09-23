@@ -10,31 +10,37 @@ jobs:
   test:
     strategy:
       matrix:
-        project: [dictionary, english-philosophical-texts, markit, texts]
-        
+        project: [
+          dictionary,
+          english-philosophical-texts,
+          english-philosophical-texts-online,
+          markit,
+          texts,
+        ]
+
     name: ${{ matrix.project }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    
+
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
-      
+
       - name: Install Deno
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
           cache: true
-      
+
       - name: Run tests
         working-directory: ./${{ matrix.project }}
         run: deno task test
-      
+
       - name: Run linter
         working-directory: ./${{ matrix.project }}
         run: deno task lint
-      
+
       - name: Check formatting
         working-directory: ./${{ matrix.project }}
         run: deno task fmt

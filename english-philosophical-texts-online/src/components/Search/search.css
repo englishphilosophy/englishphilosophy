@@ -1,0 +1,26 @@
+.search {
+  display: grid;
+  grid-gap: 1em;
+
+  form {
+    display: grid;
+    grid-gap: 0.5em;
+
+    .search-query {
+      display: grid;
+      grid-gap: 0.5em;
+      grid-template-columns: 1fr auto;
+    }
+
+    .search-options {
+      display: grid;
+      grid-gap: 0.5em;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .search-error {
+      background-color: var(--beige);
+      padding: 0.5em;
+    }
+  }
+}

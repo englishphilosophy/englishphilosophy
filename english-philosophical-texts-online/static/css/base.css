@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 1.625em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.375em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 1.125em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  margin: 0;
+}
+
+input[type="search"],
+input[type="text"],
+select {
+  background: #fff;
+  padding: 0.25em 0.5em;
+  height: 2.5em;
+  font: inherit;
+  border: 2px solid var(--gray);
+  outline: none;
+  transition: 0.3s;
+
+  &:focus {
+    border-color: var(--blue);
+  }
+}
+
+label {
+  cursor: pointer;
+  display: block;
+}
+
+button {
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0.5em 1em;
+  height: 2.5em;
+  background: var(--blue);
+  color: #fff;
+  cursor: pointer;
+}
+
+a {
+  color: var(--blue);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+b {
+  font-weight: 600;
+}
+
+mark {
+  background: var(--beige);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+thead tr {
+  background: var(--lightgray);
+}
+
+tbody tr {
+  border-top: 1px solid var(--darkgray);
+}
+
+th {
+  text-align: left;
+  font-weight: 600;
+}
+
+th, td {
+  vertical-align: top;
+  padding: 0.25em 0.5em;
+}
+
+.hidden {
+  display: none !important;
+}

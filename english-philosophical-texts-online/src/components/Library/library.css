@@ -1,0 +1,52 @@
+.library {
+  display: grid;
+  grid-gap: 0.5em;
+
+  .author {
+    display: block;
+    padding: 0.5em;
+    background: var(--white);
+    border: 1px solid var(--gray);
+    transition: 0.3s ease-in-out;
+    color: inherit;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    &.empty {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    h6 {
+      margin-bottom: 0.5em;
+      color: var(--blue);
+    }
+  }
+}
+
+@media (min-width: 34em) {
+  .library {
+    .author {
+      display: flex;
+
+      h6 {
+        flex: 1;
+        padding-right: 0.5em;
+      }
+
+      .details {
+        flex-basis: 13em;
+      }
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .library {
+    grid-template-columns: 1fr 1fr;
+  }
+}

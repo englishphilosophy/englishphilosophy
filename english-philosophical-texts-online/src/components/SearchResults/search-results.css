@@ -1,0 +1,14 @@
+.search-results {
+  display: grid;
+  grid-gap: 1em;
+
+  h3 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .feedback {
+    background-color: var(--beige);
+    padding: 0.5em;
+  }
+}

@@ -2,6 +2,7 @@
   "workspace": [
     "./dictionary",
     "./english-philosophical-texts",
+    "./english-philosophical-texts-online",
     "./markit",
     "./texts"
   ],

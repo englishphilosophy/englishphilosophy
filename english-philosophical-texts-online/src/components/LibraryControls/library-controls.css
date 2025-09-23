@@ -1,0 +1,30 @@
+.library-controls {
+  background-image: url("../leviathan.webp");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+
+  form {
+    background: var(--transblack);
+    display: grid;
+    grid-gap: 0.5em;
+  }
+}
+
+@media (min-width: 34rem) {
+  .library-controls {
+    padding: 10em 1em 1em;
+
+    form {
+      grid-template-columns: 1fr auto;
+    }
+  }
+}
+
+@media (min-width: 59rem) {
+  .library-controls {
+    form {
+      padding: 1em;
+    }
+  }
+}

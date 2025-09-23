@@ -54,3 +54,17 @@ export type BlockData = {
   pages?: string;
   speaker?: string;
 };
+
+export type SearchOptions = TextSearchOptions | RegexSearchOptions;
+
+export type TextSearchOptions = {
+  query: string;
+  ignorePunctuation: boolean;
+  caseInsensitive: boolean;
+  wholeWords: boolean;
+  variantSpellings: boolean;
+};
+
+export type RegexSearchOptions = {
+  regex: RegExp;
+};
