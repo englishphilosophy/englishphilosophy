@@ -1,4 +1,4 @@
-import { exists } from "@std/fs";
+import { ensureDir, exists } from "@std/fs";
 import { extname } from "@std/path";
 import { compileBaseStub } from "./lib/compile.ts";
 import type { Stub } from "./types.ts";
@@ -9,7 +9,7 @@ export default async (
 ): Promise<Stub[]> => {
   // optionally clear the context cache
   if (clearContextCache) {
-    contextCache.clear();
+    Deno.remove(`${directory}/.cache/context.json`).catch(() => {});
   }
 
   // if there's no context directory, there's no context
@@ -23,19 +23,24 @@ export default async (
     throw new Error(`Context directory "${directory}" does not exist`);
   }
 
-  if (contextCache.has(directory)) {
+  // check if there's a cached context
+  if (await exists(`${directory}/.cache/context.json`)) {
     // return the cached context for speed
-    return contextCache.get(directory)!;
+    return JSON.parse(
+      await Deno.readTextFile(`${directory}/.cache/context.json`),
+    );
   } else {
     // otherwise read all .mit files in the directory and generate the context
     const mitFiles = await readMitPaths(directory);
     const context = await readContext(mitFiles);
-    contextCache.set(directory, context); // and cache it for next time
+    await ensureDir(`${directory}/.cache`); // ensure the cache directory exists
+    await Deno.writeTextFile(
+      `${directory}/.cache/context.json`,
+      JSON.stringify(context),
+    ); // and cache a copy of it for next time
     return context;
   }
 };
-
-const contextCache = new Map<string, Stub[]>();
 
 export const readMitPaths = async (directory: string) => {
   const mitFiles: string[] = [];

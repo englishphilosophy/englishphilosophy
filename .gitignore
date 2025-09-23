@@ -1,3 +1,4 @@
 /.vscode/
 /.WIP/
 .DS_Store
+.cache/
