@@ -30,8 +30,8 @@ export type Rules =
   & Record<ComplexTag, string>;
 
 export const htmlRules: Rules = {
-  "{-}": "&en;",
-  "{--}": "&em;",
+  "{-}": "&ndash;",
+  "{--}": "&mdash;",
   "~~": "&emsp;",
   "~": "&nbsp;",
   "//": "<br />",
@@ -47,7 +47,7 @@ export const htmlRules: Rules = {
   "*": ["<strong>", "</strong>"],
   _: ["<em>", "</em>"],
   $: ['<em class="foreign">', "</em>"],
-  "#": ["<aside>", "</aside>"],
+  "#": ['<span class="aside">', "</span>"],
   "{++text++}": "<ins>{text}</ins>",
   "{--text--}": "<del>{text}</del>",
   "{~~text1->text2~~}": "<del>{text1}</del><ins>{text2}</ins>",
@@ -57,8 +57,8 @@ export const htmlRules: Rules = {
 };
 
 export const textRules: Rules = {
-  "{-}": "–",
-  "{--}": "—",
+  "{-}": "&ndash;",
+  "{--}": "&mdash;",
   "~~": "  ",
   "~": " ",
   "//": "\n",

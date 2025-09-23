@@ -119,7 +119,7 @@ options:
 | `_text_`             | emphasised text              | `<em>text</em>`                    |
 | `$text$`             | foreign text                 | `<em class="foreign">text</em>`    |
 | `$$tect$$`           | Greek text in Latin alphabet | `<em class="foreign">τεχτ</em>`    |
-| `#text#`             | margin comment               | `<aside>text</aside>`              |
+| `#text#`             | margin comment               | `<span class="aside">text</span>`  |
 | `{ae}`               | "ae" ligature                | `æ`                                |
 | `{AE}`               | "AE" ligature                | `Æ`                                |
 | `{oe}`               | "oe" ligature                | `œ`                                |
