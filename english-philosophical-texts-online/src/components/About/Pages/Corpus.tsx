@@ -9,8 +9,10 @@ export default () => (
       comparative textual analyses. Note however that this project is still in
       the early stages. So far there are texts by{" "}
       <a href="/astell">Mary Astell</a>, <a href="/berkeley">George Berkeley</a>
-      , <a href="/butler">Joseph Butler</a>, <a href="/conway">Anne Conway</a>,{" "}
-      <a href="/drake">Judith Drake</a>, <a href="/hobbes">Thomas Hobbes</a>,{" "}
+      , <a href="/butler">Joseph Butler</a>, <a href="/conway">Anne Conway</a>,
+      {" "}
+      <a href="/drake">Judith Drake</a>, <a href="/hobbes">Thomas Hobbes</a>,
+      {" "}
       <a href="/hume">David Hume</a>, <a href="/hutcheson">Francis Hutcheson</a>
       , <a href="/locke">John Locke</a>,{" "}
       <a href="/mandeville">Bernard Mandeville</a>,{" "}
@@ -28,11 +30,11 @@ export default () => (
         English versions of Hobbes’s works that he himself published (even if he
         published a Latin version first), but excluded his Latin works that were
         only translated posthumously. The original English manuscript of
-        Conway’s <em>Principles of Ancient and Modern Philosophy</em>,
-        meanwhile, does not survive. It was first published in a Latin
-        translation, then posthumously translated from the Latin back into
-        English; we have included this third-hand English text, for want of
-        anything better.
+        Conway’s{" "}
+        <em>Principles of Ancient and Modern Philosophy</em>, meanwhile, does
+        not survive. It was first published in a Latin translation, then
+        posthumously translated from the Latin back into English; we have
+        included this third-hand English text, for want of anything better.
       </li>
       <li>
         Works should be philosophical in a suitably broad sense, given the
@@ -48,10 +50,11 @@ export default () => (
         this rule). This is simply to keep things within reasonable bounds.
         Works by unknown authors or North American writers could be added in the
         future. (This is why—with apologies to the Irish, Scottish, and Welsh—I
-        have called this site <em>English</em> Philosophical Texts Online, and
-        not <em>British</em> Philosophical Texts Online. As with the similarly
-        titled <em>Early English Books Online</em>, it is to the language and
-        not the nation that we are referring.)
+        have called this site <em>English</em>{" "}
+        Philosophical Texts Online, and not <em>British</em>{" "}
+        Philosophical Texts Online. As with the similarly titled{" "}
+        <em>Early English Books Online</em>, it is to the language and not the
+        nation that we are referring.)
       </li>
       <li>
         The collection should include adequate female representation, with a

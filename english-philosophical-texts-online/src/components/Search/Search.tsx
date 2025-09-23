@@ -5,16 +5,19 @@ type Props = {
 };
 
 export default ({ type, searchParams, searchError }: Props) => {
-  const q =
-    searchParams && searchParams.get("q") ? searchParams.get("q") ?? "" : "";
+  const q = searchParams && searchParams.get("q")
+    ? searchParams.get("q") ?? ""
+    : "";
   const p = searchParams ? searchParams.get("p") === "on" : true;
   const c = searchParams ? searchParams.get("c") === "on" : true;
   const w = searchParams ? searchParams.get("w") === "on" : true;
   const v = searchParams ? searchParams.get("v") === "on" : true;
-  const r =
-    searchParams && searchParams.get("r") ? searchParams.get("r") ?? "" : "";
-  const f =
-    searchParams && searchParams.get("f") ? searchParams.get("f") ?? "" : "";
+  const r = searchParams && searchParams.get("r")
+    ? searchParams.get("r") ?? ""
+    : "";
+  const f = searchParams && searchParams.get("f")
+    ? searchParams.get("f") ?? ""
+    : "";
 
   return (
     <div class="reader-section search">
@@ -42,8 +45,8 @@ export default ({ type, searchParams, searchError }: Props) => {
             <input type="checkbox" name="w" checked={w} /> match whole words
           </label>
           <label>
-            <input type="checkbox" name="v" checked={v} /> match variant
-            spellings
+            <input type="checkbox" name="v" checked={v} />{" "}
+            match variant spellings
           </label>
         </div>
       </form>

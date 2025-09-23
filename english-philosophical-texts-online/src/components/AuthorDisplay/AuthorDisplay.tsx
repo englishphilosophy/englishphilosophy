@@ -16,10 +16,8 @@ export default ({ author, matches }: Props) => (
     <h4>
       {author.author.nationality}, {author.author.sex}
     </h4>
-    {matches ? (
-      <SearchResults context={author} matches={matches} />
-    ) : (
-      <TableOfContents text={author} />
-    )}
+    {matches
+      ? <SearchResults context={author} matches={matches} />
+      : <TableOfContents text={author} />}
   </div>
 );

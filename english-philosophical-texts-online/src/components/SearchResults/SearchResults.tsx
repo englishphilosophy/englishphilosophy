@@ -17,8 +17,8 @@ export default ({ context, matches }: Props) => (
       {matches.length === 0
         ? "No matches found."
         : `Your search matched ${matches.length} ${
-            matches.length === 1 ? "paragraph/note" : "paragraphs/notes"
-          }.`}
+          matches.length === 1 ? "paragraph/note" : "paragraphs/notes"
+        }.`}
     </div>
     {matches.length > 0 ? <Blocks blocks={matches} /> : null}
   </div>

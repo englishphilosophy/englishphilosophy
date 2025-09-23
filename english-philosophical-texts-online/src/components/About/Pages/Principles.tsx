@@ -6,13 +6,13 @@ export default () => (
       philosophical texts easily and freely available for students and scholars
       to read, search, and computationally analyse and compare. To this end, and
       to keep things within reasonable bounds, we aim to provide just one{" "}
-      <em>critical text</em> for each work, but a critical text without any
-      textual apparatus or commentary. In other words, we aim to identify the
-      most authoritative copytext – typically the last edition the author saw
-      through the press – and then to silently ‘correct’ it according to our
-      best judgement (e.g. by incorporating variants from another edition or
-      manuscript that seem preferable, or implementing changes noted in any
-      published ERRATA sheets).
+      <em>critical text</em>{" "}
+      for each work, but a critical text without any textual apparatus or
+      commentary. In other words, we aim to identify the most authoritative
+      copytext – typically the last edition the author saw through the press –
+      and then to silently ‘correct’ it according to our best judgement (e.g. by
+      incorporating variants from another edition or manuscript that seem
+      preferable, or implementing changes noted in any published ERRATA sheets).
     </p>
     <p>
       A silently edited critical text, without any accompanying critical
@@ -20,13 +20,14 @@ export default () => (
       But the editions provided on this site are not intended for that purpose.
     </p>
     <p>
-      Though our <em>aim</em> is to provide (silently edited) critical texts, we
-      expect to be striving towards this goal for some time, and will provide
-      imperfect editions along the way. In practice, we will be constrained by
-      the quality of the publicly available digital editions that we have to
-      start with, and by our own limited time and resources. We would be
-      enormously grateful if, while using the texts on this site, you could keep
-      an eye out for potential errors and inform us of any that you notice.
+      Though our <em>aim</em>{" "}
+      is to provide (silently edited) critical texts, we expect to be striving
+      towards this goal for some time, and will provide imperfect editions along
+      the way. In practice, we will be constrained by the quality of the
+      publicly available digital editions that we have to start with, and by our
+      own limited time and resources. We would be enormously grateful if, while
+      using the texts on this site, you could keep an eye out for potential
+      errors and inform us of any that you notice.
     </p>
     <h2>Formatting</h2>
     <p>

@@ -9,11 +9,9 @@ type Props = {
 export default ({ text }: Props) => (
   <div class="table-of-contents">
     {text.children.map((textStub) =>
-      textStub.imported ? (
-        <a href={url(textStub)}>{title(textStub)}</a>
-      ) : (
-        <span>{title(textStub)}</span>
-      )
+      textStub.imported
+        ? <a key={textStub.id} href={url(textStub)}>{title(textStub)}</a>
+        : <span key={textStub.id}>{title(textStub)}</span>
     )}
   </div>
 );

@@ -13,7 +13,9 @@ export default async (id: string, searchParams: URLSearchParams) => {
   const options = searchOptions(searchParams);
 
   if (typeof options === "string") {
-    const content = <Text text={text} searchParams={searchParams} searchError={options} />;
+    const content = (
+      <Text text={text} searchParams={searchParams} searchError={options} />
+    );
     return response(content);
   }
 

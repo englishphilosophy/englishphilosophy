@@ -1,4 +1,4 @@
-import type { Author, Block, SearchOptions } from "@englishphilosophy/texts";
+import type { Author, Block } from "@englishphilosophy/texts";
 import AuthorDisplay from "../components/AuthorDisplay/AuthorDisplay.tsx";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb.tsx";
 import Page from "../components/Page/Page.tsx";

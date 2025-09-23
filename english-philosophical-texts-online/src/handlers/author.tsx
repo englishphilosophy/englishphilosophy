@@ -13,7 +13,13 @@ export default async (id: string, searchParams: URLSearchParams) => {
   const options = searchOptions(searchParams);
 
   if (typeof options === "string") {
-    const content = <Author author={author} searchParams={searchParams} searchError={options} />;
+    const content = (
+      <Author
+        author={author}
+        searchParams={searchParams}
+        searchError={options}
+      />
+    );
     return response(content);
   }
 
