@@ -1,6 +1,4 @@
-import { getPath } from "@englishphilosophy/texts";
-import getMatches from "../utils/getMatches.ts";
-import getRegex from "../utils/getRegex.ts";
+import { getMatches, getPath } from "@englishphilosophy/texts";
 import response from "../utils/response.ts";
 
 export default async (
@@ -8,54 +6,45 @@ export default async (
   searchParams: URLSearchParams,
 ): Promise<Response> => {
   const path = await getPath(id);
-  return path
-    ? handleSearch(id, getQueryOptions(searchParams))
-    : response("error", "Not found", 404);
-};
-
-const handleSearch = (
-  id: string,
-  queryOptions: ReturnType<typeof getQueryOptions>,
-) =>
-  queryOptions.regex
-    ? handleRegexSearch(id, queryOptions.regex, queryOptions)
-    : queryOptions.query
-    ? handleQuerySearch(id, queryOptions.query, queryOptions)
-    : response("error", "No search parameters provided.", 400);
-
-const handleRegexSearch = async (
-  id: string,
-  regex: string,
-  queryOptions: ReturnType<typeof getQueryOptions>,
-) => {
-  try {
-    const regexWithBrackets = `(${regex})`; // capture the whole expression for highlighting later
-    const exp = queryOptions.flags
-      ? new RegExp(regexWithBrackets, queryOptions.flags)
-      : new RegExp(regexWithBrackets);
-    const matches = await getMatches(id, exp);
-    return response("data", matches);
-  } catch {
-    return response("error", `Invalid regular expression (${regex}).`, 400);
+  if (!path) {
+    return response("error", "Text not found", 404);
   }
-};
 
-const handleQuerySearch = async (
-  id: string,
-  query: string,
-  queryOptions: ReturnType<typeof getQueryOptions>,
-) => {
-  const regex = getRegex(query, queryOptions);
-  const matches = await getMatches(id, regex);
+  const searchOptions = getSearchOptions(searchParams);
+  if (typeof searchOptions === "string") {
+    return response("error", searchOptions, 400);
+  }
+
+  const matches = await getMatches(id, searchOptions);
   return response("data", matches);
 };
 
-const getQueryOptions = (searchParams: URLSearchParams) => ({
-  regex: searchParams.get("regex"),
-  flags: searchParams.get("flags"),
-  query: searchParams.get("query"),
-  ignorePunctuation: searchParams.get("ignorePunctuation") !== "off",
-  caseInsensitive: searchParams.get("caseInsensitive") !== "off",
-  wholeWords: searchParams.get("wholeWords") !== "off",
-  variantSpellings: searchParams.get("variantSpellings") !== "off",
-});
+const getSearchOptions = (searchParams: URLSearchParams) => {
+  const regex = searchParams.get("regex");
+  if (regex) {
+    try {
+      const flags = searchParams.get("flags") || undefined;
+      const regexWithBrackets = `(${regex})`; // capture the whole expression for highlighting later
+      return {
+        regex: flags
+          ? new RegExp(regexWithBrackets, flags)
+          : new RegExp(regexWithBrackets),
+      };
+    } catch {
+      return `Invalid regular expression (${regex}).`;
+    }
+  }
+
+  const query = searchParams.get("query");
+  if (query) {
+    return {
+      query,
+      ignorePunctuation: searchParams.get("ignorePunctuation") !== "off",
+      caseInsensitive: searchParams.get("caseInsensitive") !== "off",
+      wholeWords: searchParams.get("wholeWords") !== "off",
+      variantSpellings: searchParams.get("variantSpellings") !== "off",
+    };
+  }
+
+  return "No query or regex provided.";
+};
