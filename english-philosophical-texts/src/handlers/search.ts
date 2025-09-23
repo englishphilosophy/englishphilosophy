@@ -1,5 +1,4 @@
-import { getPath } from "@englishphilosophy/texts";
-import getMatches from "../utils/getMatches.ts";
+import { getMatches, getPath } from "@englishphilosophy/texts";
 import response from "../utils/response.ts";
 
 export default async (
