@@ -8,9 +8,9 @@
     "jsxImportSource": "preact"
   },
   "tasks": {
-    "dev": "PORT=3001 TEXTS_DIR=../texts/data deno run --watch --allow-env --allow-ffi --allow-read --allow-write --allow-net --unstable-bundle bin/serve.ts",
+    "dev": "PORT=3001 BASE_DIR=. TEXTS_DIR=../texts/data deno run --watch --allow-env --allow-ffi --allow-read --allow-write --allow-net --unstable-bundle bin/serve.ts",
     "start": "deno run --allow-env --allow-read --allow-write --allow-net bin/serve.ts",
-    "test": "TEXTS_DIR=../texts/data deno test --allow-run --allow-env --allow-ffi --allow-read --allow-write --allow-net --unstable-bundle",
+    "test": "BASE_DIR=. TEXTS_DIR=../texts/data deno test --allow-run --allow-env --allow-ffi --allow-read --allow-write --allow-net --unstable-bundle",
     "test:watch": "deno task test --watch",
     "lint": "deno lint",
     "lint:watch": "deno task lint --watch",
