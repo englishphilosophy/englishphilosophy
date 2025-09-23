@@ -1,0 +1,41 @@
+.footer {
+  background: var(--black);
+  color: var(--white);
+  padding-top: 2em;
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  p {
+    flex-basis: 38em;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  a {
+    color: var(--beige);
+  }
+}
+
+@media (min-width: 59rem) {
+  .footer {
+    padding-top: 6em;
+    padding-bottom: 2em;
+  }
+}
+
+@media (min-width: 62rem) {
+  .footer {
+    section {
+      padding: 2em 3em;
+    }
+  }
+}

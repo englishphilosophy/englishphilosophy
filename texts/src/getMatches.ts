@@ -1,19 +1,6 @@
 import { type Block, getText } from "@englishphilosophy/texts";
 import { getVariants } from "@englishphilosophy/dictionary";
-
-type SearchOptions = TextSearchOptions | RegexSearchOptions;
-
-type TextSearchOptions = {
-  query: string;
-  ignorePunctuation: boolean;
-  caseInsensitive: boolean;
-  wholeWords: boolean;
-  variantSpellings: boolean;
-};
-
-type RegexSearchOptions = {
-  regex: RegExp;
-};
+import type { SearchOptions, TextSearchOptions } from "./types.ts";
 
 const getMatches = async (
   id: string,
