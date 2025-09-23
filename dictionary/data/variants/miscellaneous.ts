@@ -10,6 +10,8 @@ export default [
   ["controuled", "controlled"],
   ["fixt", "fixed"],
   ["glewed", "glued"],
+  ["humane", "human"], // might have to be careful with this, as "humane" evolved to mean something else in the 18th century
+  ["inhumane", "inhuman"],
   ["jewell", "jewel"],
   ["jewells", "jewels"],
   ["judg", "judge"],
@@ -23,6 +25,7 @@ export default [
   ["recompenced", "recompensed"],
   ["reflexion", "reflection"],
   ["sacrifised", "sacrificed"],
+  ["selfe", "self"],
   ["shaddow", "shadow"],
   ["shew", "show"],
   ["shewed", "showed"],
