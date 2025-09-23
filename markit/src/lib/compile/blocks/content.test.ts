@@ -174,7 +174,7 @@ describe("compile > blocks > content", () => {
     // html
     assertEquals(
       content("#margin comment#", "html"),
-      "<p><span class=\"aside\">margin comment</span></p>",
+      '<p><span class="aside">margin comment</span></p>',
     );
   });
 
@@ -271,7 +271,7 @@ describe("compile > blocks > content", () => {
         "£1 Heading 1 £1 £2 Heading 2 £2 Paragraph. // This _sentence has #some *nested*# tags_.",
         "html",
       ),
-      "<h1>Heading 1</h1><h2>Heading 2</h2><p>Paragraph.<br />This <em>sentence has <span class=\"aside\">some <strong>nested</strong></span> tags</em>.</p>",
+      '<h1>Heading 1</h1><h2>Heading 2</h2><p>Paragraph.<br />This <em>sentence has <span class="aside">some <strong>nested</strong></span> tags</em>.</p>',
     );
   });
 });

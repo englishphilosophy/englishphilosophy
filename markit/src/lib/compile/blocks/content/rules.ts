@@ -47,7 +47,7 @@ export const htmlRules: Rules = {
   "*": ["<strong>", "</strong>"],
   _: ["<em>", "</em>"],
   $: ['<em class="foreign">', "</em>"],
-  "#": ["<span class=\"aside\">", "</span>"],
+  "#": ['<span class="aside">', "</span>"],
   "{++text++}": "<ins>{text}</ins>",
   "{--text--}": "<del>{text}</del>",
   "{~~text1->text2~~}": "<del>{text1}</del><ins>{text2}</ins>",
