@@ -23,7 +23,7 @@ test("`/leviathan.webp` returns leviathan image", async () => {
 
 test("`/screen.css` returns CSS", async () => {
   const { response } = await request("/screen.css");
-  assertEquals(response.headers.get("content-type"), "text/css");
+  assertEquals(response.headers.get("content-type"), "text/css; charset=UTF-8");
   assertEquals(response.status, 200);
 });
 
@@ -31,7 +31,7 @@ test("`/index.js` returns JS", async () => {
   const { response } = await request("/index.js");
   assertEquals(
     response.headers.get("content-type"),
-    "text/javascript",
+    "text/javascript; charset=UTF-8",
   );
   assertEquals(response.status, 200);
 });

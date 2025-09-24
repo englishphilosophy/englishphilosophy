@@ -1,39 +1,39 @@
 import { extname } from "@std/path";
 import { contentType } from "@std/media-types";
-import { bundle } from "lightningcss";
+import init, { bundle } from "lightningcss-wasm";
+
+await init();
 
 const baseDir = Deno.env.get("BASE_DIR") ?? ".";
 
 export default async (path: string): Promise<Response> => {
-  const ext = extname(path);
+  const content = await getContent(path);
+  const headers = getHeaders(path, content);
+  return new Response(content, { headers });
+};
 
+const getContent = async (path: string) => {
+  const ext = extname(path);
   switch (ext) {
     case ".css": {
-      const { code: content } = bundle({
-        filename: baseDir + path,
+      const { code } = bundle({
+        filename: baseDir + "/static" + path,
         minify: true,
       });
-      const headers = {
-        "Content-Type": "text/css",
-        length: `${content.length}`,
-      };
-      return new Response(content as Uint8Array<ArrayBuffer>, { headers });
+      return code as Uint8Array<ArrayBuffer>;
     }
     case ".js": {
-      const content = await Deno.readTextFile(baseDir + "/.build" + path);
-      const headers = {
-        "Content-Type": "text/javascript",
-        length: `${content.length}`,
-      };
-      return new Response(content, { headers });
+      return await Deno.readTextFile(baseDir + "/.build" + path);
     }
     default: {
-      const content = await Deno.readFile(baseDir + path);
-      const headers = {
-        "Content-Type": contentType(ext) || "application/octet-stream",
-        length: `${Deno.statSync(baseDir + path).size}`,
-      };
-      return new Response(content, { headers });
+      return await Deno.readFile(baseDir + "/static" + path);
     }
   }
 };
+
+const getHeaders = (path: string, content: Uint8Array | string) => ({
+  "Content-Type": contentType(extname(path)) ?? "application/octet-stream",
+  length: typeof content === "string"
+    ? `${content.length}`
+    : `${Deno.statSync(baseDir + "/static" + path).size}`,
+});
