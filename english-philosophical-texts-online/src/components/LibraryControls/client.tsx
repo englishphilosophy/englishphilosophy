@@ -1,27 +1,23 @@
 import { renderToString } from "preact-render-to-string";
-import type { Index } from "@englishphilosophy/texts";
+import type { Author } from "@englishphilosophy/texts";
 import Library from "../Library/Library.tsx";
 
-type Window = typeof globalThis & {
-  index?: Index;
-};
-
-const libraryControls = document.getElementById("library-controls");
-const libraryContainer = document.getElementById("library-container");
-const index = (globalThis as Window).index;
-
-if (libraryControls && libraryContainer && index) {
-  libraryControls.addEventListener("input", (event) => {
-    event.preventDefault();
-    const formData = new FormData(libraryControls as HTMLFormElement);
+document.querySelector("[data-authors][data-library-container-id]")
+  ?.addEventListener("input", (event) => {
+    const form = event.currentTarget as HTMLFormElement;
+    const formData = new FormData(form);
     const query = formData.get("query")?.toString() ?? "";
     const order = formData.get("order")?.toString() ?? "";
-    libraryContainer.innerHTML = renderToString(
-      <Library
-        authors={index.children}
-        query={query}
-        order={order}
-      />,
-    );
+    const authors = JSON.parse(form.getAttribute("data-authors")!) as Author[];
+    const libraryContainerId = form.getAttribute("data-library-container-id")!;
+    const libraryContainer = document.getElementById(libraryContainerId);
+    if (libraryContainer) {
+      libraryContainer.innerHTML = renderToString(
+        <Library
+          authors={authors}
+          query={query}
+          order={order}
+        />,
+      );
+    }
   });
-}

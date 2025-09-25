@@ -9,19 +9,24 @@ type Props = {
   order?: string;
 };
 
-export default ({ index, query, order }: Props) => (
-  <Page
-    section="texts"
-    heading={<LibraryControls query={query} order={order} />}
-  >
-    <div id="library-container">
-      <Library authors={index.children} query={query} order={order} />
-    </div>
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `window.index = ${JSON.stringify(index)};`,
-      }}
+export default ({ index, query, order }: Props) => {
+  const libraryContainerId = "library-container";
+
+  return (
+    <Page
+      section="texts"
+      heading={
+        <LibraryControls
+          authors={index.children}
+          libraryContainerId={libraryContainerId}
+          query={query}
+          order={order}
+        />
+      }
     >
-    </script>
-  </Page>
-);
+      <div id={libraryContainerId}>
+        <Library authors={index.children} query={query} order={order} />
+      </div>
+    </Page>
+  );
+};

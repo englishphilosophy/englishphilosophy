@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default ({ author, matches }: Props) => (
-  <div class="reader-section author-display">
+  <div class="author-display">
     <h2>
       {fullname(author.author)} ({author.author.birth}-{author.author.death})
     </h2>

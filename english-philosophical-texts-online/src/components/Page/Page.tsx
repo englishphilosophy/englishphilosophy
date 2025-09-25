@@ -1,6 +1,7 @@
 import type { VNode } from "preact";
 import Footer from "../Footer/Footer.tsx";
 import Header from "../Header/Header.tsx";
+import Main from "../Main/Main.tsx";
 
 type Props = {
   title?: string;
@@ -36,7 +37,7 @@ export default ({ title, section, heading, children }: Props) => {
       <body>
         <Header section={section} />
         {heading}
-        <main class="main">{children}</main>
+        <Main>{children}</Main>
         <Footer />
       </body>
     </html>

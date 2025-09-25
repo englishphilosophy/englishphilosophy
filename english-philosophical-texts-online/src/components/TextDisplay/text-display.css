@@ -1,5 +1,4 @@
 .text-display {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+  display: grid;
+  grid-gap: 1em;
 }

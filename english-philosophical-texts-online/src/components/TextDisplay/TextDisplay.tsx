@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default ({ text, matches }: Props) => (
-  <div class="reader-section text-display">
+  <div class="text-display">
     <Blocks blocks={text.blocks.slice(0, 1)} />
     {matches
       ? <SearchResults context={text} matches={matches} />

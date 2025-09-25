@@ -1,0 +1,10 @@
+.main {
+  background-color: var(--lightgray);
+  padding: 1em 1em 3em;
+
+  .container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+}

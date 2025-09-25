@@ -9,9 +9,13 @@
 @import "../src/components/Header/header.css";
 @import "../src/components/Library/library.css";
 @import "../src/components/LibraryControls/library-controls.css";
+@import "../src/components/Main/main.css";
+@import "../src/components/Modal/modal.css";
 @import "../src/components/Page/page.css";
 @import "../src/components/Reader/reader.css";
 @import "../src/components/Search/search.css";
 @import "../src/components/SearchResults/search-results.css";
 @import "../src/components/SubHeader/sub-header.css";
 @import "../src/components/TableOfContents/table-of-contents.css";
+@import "../src/components/TextDetails/text-details.css";
+@import "../src/components/TextDisplay/text-display.css";

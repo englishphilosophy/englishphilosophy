@@ -1,25 +1,13 @@
 .reader {
-  padding: 0.5em 0;
-  display: grid;
-  gap: 1em;
-  min-height: 100%;
-  align-items: start;
-
-  .reader-section {
-    border: 1px solid var(--gray);
-    background: #fff;
-    padding: 1em;
-  }
+  border: 1px solid var(--gray);
+  background: var(--white);
+  padding: 2rem 1rem 3rem;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
-@media (min-width: 79rem) {
+@media (min-width: 48rem) {
   .reader {
-    grid-template-columns: 1fr 1fr;
-
-    .reader-section {
-      &:last-child {
-        align-self: stretch;
-      }
-    }
+    padding: 2rem 5rem 3rem;
   }
 }

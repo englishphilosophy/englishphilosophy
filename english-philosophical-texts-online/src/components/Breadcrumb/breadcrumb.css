@@ -26,8 +26,8 @@
     }
   }
 
-  .context {
-    flex: 1;
+  .context,
+  .tools {
     display: flex;
     justify-content: flex-end;
   }

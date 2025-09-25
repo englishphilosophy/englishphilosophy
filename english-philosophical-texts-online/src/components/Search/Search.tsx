@@ -1,10 +1,9 @@
 type Props = {
-  type: "author" | "text" | "section";
   searchParams?: URLSearchParams;
   searchError?: string;
 };
 
-export default ({ type, searchParams, searchError }: Props) => {
+export default ({ searchParams, searchError }: Props) => {
   const q = searchParams && searchParams.get("q")
     ? searchParams.get("q") ?? ""
     : "";
@@ -20,8 +19,7 @@ export default ({ type, searchParams, searchError }: Props) => {
     : "";
 
   return (
-    <div class="reader-section search">
-      <h3>Search this {type}</h3>
+    <div class="search">
       <h4>Text Search</h4>
       <form method="get">
         <div class="search-query">
@@ -53,16 +51,14 @@ export default ({ type, searchParams, searchError }: Props) => {
       <h4>Regular Expression Search</h4>
       <form method="get">
         <div class="search-query">
-          <div class="search-query">
-            <input
-              type="search"
-              name="r"
-              required
-              value={r}
-              placeholder="regular expression"
-            />
-            <input type="search" name="f" value={f} placeholder="flags" />
-          </div>
+          <input
+            type="search"
+            name="r"
+            required
+            value={r}
+            placeholder="regular expression"
+          />
+          <input type="search" name="f" value={f} placeholder="flags" />
           <button type="submit">Search</button>
         </div>
         {searchError ? <p class="search-error">{searchError}</p> : null}
