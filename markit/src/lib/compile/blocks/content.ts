@@ -18,7 +18,7 @@ export default (text: string, format: Exclude<Format, "markit">): string => {
   return third;
 };
 
-const innerContent = (text: string, format: Exclude<Format, "markit">) => {
+export const innerContent = (text: string, format: Exclude<Format, "markit">) => {
   const rules = format === "text" ? textRules : htmlRules;
   const formattingStack = [];
   let inBlockQuotation = false;
