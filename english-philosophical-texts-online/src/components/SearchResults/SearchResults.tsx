@@ -14,11 +14,18 @@ export default ({ context, matches }: Props) => (
       <a href={url(context)}>clear</a>
     </h3>
     <div class="feedback">
-      {matches.length === 0
-        ? "No matches found."
-        : `Your search matched ${matches.length} ${
-          matches.length === 1 ? "paragraph/note" : "paragraphs/notes"
-        }.`}
+      <p>
+        {matches.length === 0
+          ? "No matches found."
+          : `Your search matched ${matches.length} ${
+            matches.length === 1 ? "paragraph/note" : "paragraphs/notes"
+          }.`}
+      </p>
+      <p>
+        Note that matching text is shown without formatting. To see the text
+        with formatting, click on the link for each paragraph to see it in
+        context.
+      </p>
     </div>
     {matches.length > 0 ? <Blocks blocks={matches} /> : null}
   </div>

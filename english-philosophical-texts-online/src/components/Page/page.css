@@ -21,30 +21,17 @@ body {
     grid-row: 1;
   }
 
-  > .sub-header,
-  > .library-controls {
+  > .library-controls,
+  > .breadcrumb,
+  > .sub-header {
     grid-row: 2;
   }
 
   .main {
     grid-row: 3;
-    padding-bottom: 3em;
-    background-color: var(--lightgray);
   }
 
   .footer {
     grid-row: 4;
-  }
-
-  .main-header,
-  .library-controls,
-  .main,
-  .footer {
-    > * {
-      width: 100%;
-      max-width: 83em;
-      margin: 0 auto;
-      padding: 1em;
-    }
   }
 }

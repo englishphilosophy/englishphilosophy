@@ -20,7 +20,7 @@ export default ({ ancestors, previous, next }: Props) => (
     </div>
     <div class="context">
       <div class="prev">
-        {previous
+        {previous && previous.imported
           ? (
             <a href={url(previous)}>
               &lt; {previous.breadcrumb ?? previous.id}
@@ -29,10 +29,22 @@ export default ({ ancestors, previous, next }: Props) => (
           : null}
       </div>
       <div class="next">
-        {next
+        {next && next.imported
           ? <a href={url(next)}>{next.breadcrumb ?? next.id} &gt;</a>
           : null}
       </div>
+    </div>
+    <div class="tools">
+      {ancestors.length > 1
+        ? (
+          <a href="#about-modal" data-modal="about-modal">
+            Details
+          </a>
+        )
+        : null}
+      <a href="#search-modal" data-modal="search-modal">
+        Search
+      </a>
     </div>
   </nav>
 );

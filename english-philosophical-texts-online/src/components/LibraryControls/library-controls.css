@@ -7,24 +7,25 @@
   form {
     background: var(--transblack);
     display: grid;
-    grid-gap: 0.5em;
+    grid-gap: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
   }
 }
 
 @media (min-width: 34rem) {
   .library-controls {
     padding: 10em 1em 1em;
-
-    form {
-      grid-template-columns: 1fr auto;
-    }
   }
 }
 
-@media (min-width: 59rem) {
+@media (min-width: 42rem) {
   .library-controls {
     form {
-      padding: 1em;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
     }
   }
 }

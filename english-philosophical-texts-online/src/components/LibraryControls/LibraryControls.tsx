@@ -1,11 +1,18 @@
+import type { Author } from "@englishphilosophy/texts";
+
 type Props = {
+  authors: Author[];
+  libraryContainerId: string;
   query?: string;
   order?: string;
 };
 
-export default ({ query, order }: Props) => (
+export default ({ authors, libraryContainerId, query, order }: Props) => (
   <div class="library-controls">
-    <form id="library-controls">
+    <form
+      data-authors={JSON.stringify(authors)}
+      data-library-container-id={libraryContainerId}
+    >
       <input
         name="query"
         type="text"

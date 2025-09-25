@@ -3,11 +3,12 @@
   grid-gap: 0.5em;
 
   .author {
-    display: block;
-    padding: 0.5em;
+    display: grid;
+    grid-gap: 0.5em;
+    padding: 0.5rem 0.75rem;
     background: var(--white);
     border: 1px solid var(--gray);
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
     color: inherit;
 
     &:hover {
@@ -22,7 +23,6 @@
     }
 
     h6 {
-      margin-bottom: 0.5em;
       color: var(--blue);
     }
   }
@@ -30,12 +30,14 @@
 
 @media (min-width: 34em) {
   .library {
+    padding: 0 1em;
+
     .author {
       display: flex;
+      gap: 0.5rem;
 
       h6 {
         flex: 1;
-        padding-right: 0.5em;
       }
 
       .details {

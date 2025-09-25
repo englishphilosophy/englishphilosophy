@@ -18,13 +18,6 @@ export type AboutPage = keyof typeof pages;
 
 export default ({ page }: Props) => (
   <div class="about">
-    {page === "corpus"
-      ? <Corpus />
-      : page === "principles"
-      ? <Principles />
-      : page === "permissions"
-      ? <Permissions />
-      : <General />}
     <nav class="about-nav">
       {Object.entries(pages).map(([id, title]) => (
         <a href={`/about/${id}`} class={id === page ? "active" : ""}>
@@ -32,5 +25,12 @@ export default ({ page }: Props) => (
         </a>
       ))}
     </nav>
+    {page === "corpus"
+      ? <Corpus />
+      : page === "principles"
+      ? <Principles />
+      : page === "permissions"
+      ? <Permissions />
+      : <General />}
   </div>
 );

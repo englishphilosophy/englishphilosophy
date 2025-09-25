@@ -9,13 +9,13 @@ import text from "./handlers/text.tsx";
 export default async (port = 0): Promise<string> => {
   let server: Deno.HttpServer<Deno.NetAddr> | null = null;
   await new Promise((onListen) => {
-    server = Deno.serve({ port, onListen }, handler());
+    server = Deno.serve({ port, onListen }, handler);
   });
 
   return `http://${server!.addr.hostname}:${server!.addr.port}`;
 };
 
-const handler = () => (request: Request) => {
+const handler = (request: Request) => {
   const { pathname, searchParams } = new URL(request.url);
 
   try {
