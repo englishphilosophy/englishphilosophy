@@ -6,21 +6,10 @@ import server from "../src/server.ts";
 const baseURL = await server();
 const { get } = client(baseURL);
 
-test("`/search/:author/:text` requires query or regex", async () => {
-  const { response, payload } = await get("/search/astell");
-
-  if (!("error" in payload)) {
-    throw new Error("Expected error response to `/search/astell`");
-  }
-
-  assertEquals(payload.error, "No query or regex provided.");
-  assertEquals(response.status, 400);
-});
-
-test("`/search/:author/:text?regex=exp` returns search results", async () => {
+test("`/:author/:text?regex=exp` returns search results", async () => {
   const textId = "astell/llg";
   const regex = "severest (test|exam) my thoughts? can put 'em to";
-  const path = `/search/${textId}?regex=${
+  const path = `/${textId}?regex=${
     encodeURIComponent(
       regex,
     )
@@ -43,10 +32,10 @@ test("`/search/:author/:text?regex=exp` returns search results", async () => {
   ]);
 });
 
-test("`/search/:author/:text?query=text` returns search results", async () => {
+test("`/:author/:text?query=text` returns search results", async () => {
   const textId = "astell/llg";
   const query = "severest test my thoughts can put them to";
-  const path = `/search/${textId}?query=${encodeURIComponent(query)}` as const;
+  const path = `/${textId}?query=${encodeURIComponent(query)}` as const;
   const { payload } = await get(path);
 
   if ("error" in payload) {
@@ -65,12 +54,12 @@ test("`/search/:author/:text?query=text` returns search results", async () => {
   ]);
 });
 
-test("`/search/:author/:text?query=text` is optionally case sensitive", async () => {
+test("`/:author/:text?query=text` is optionally case sensitive", async () => {
   const textId = "astell/llg";
 
   // case doesn't match - should return no results
   const query1 = "severest test my thoughts can put 'em to";
-  const path1 = `/search/${textId}?query=${
+  const path1 = `/${textId}?query=${
     encodeURIComponent(
       query1,
     )
@@ -87,7 +76,7 @@ test("`/search/:author/:text?query=text` is optionally case sensitive", async ()
 
   // case matches - should return result
   const query2 = "severest Test my Thoughts can put 'em to";
-  const path2 = `/search/${textId}?query=${
+  const path2 = `/${textId}?query=${
     encodeURIComponent(
       query2,
     )

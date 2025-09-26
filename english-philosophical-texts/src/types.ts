@@ -15,14 +15,11 @@ export type ErrorResponse = {
 };
 
 export type Payload<Path extends string> = Path extends "/"
-  ? DataResponse<Healthcheck>
-  : Path extends "/texts" ? DataResponse<Index>
-  : Path extends `/texts/${string}/${string}`
-    ? DataResponse<Text> | ErrorResponse
-  : Path extends `/texts/${string}` ? DataResponse<Author> | ErrorResponse
-  : Path extends `/search/${string}` ? DataResponse<Block[]> | ErrorResponse
+  ? DataResponse<Index>
+  : Path extends `/${string}?query=${string}`
+    ? DataResponse<Block[]> | ErrorResponse
+  : Path extends `/${string}?regex=${string}`
+    ? DataResponse<Block[]> | ErrorResponse
+  : Path extends `/${string}/${string}` ? DataResponse<Text> | ErrorResponse
+  : Path extends `/${string}` ? DataResponse<Author> | ErrorResponse
   : never;
-
-export type Healthcheck = {
-  status: string;
-};
