@@ -10,7 +10,13 @@ export default ({ text }: Props) => (
   <div class="table-of-contents">
     {text.children.map((textStub) =>
       textStub.imported
-        ? <a key={textStub.id} href={url(textStub)}>{title(textStub)}</a>
+        ? (
+          <a
+            key={textStub.id}
+            href={url(textStub)}
+            dangerouslySetInnerHTML={{ __html: title(textStub) }}
+          />
+        )
         : <span key={textStub.id}>{title(textStub)}</span>
     )}
   </div>

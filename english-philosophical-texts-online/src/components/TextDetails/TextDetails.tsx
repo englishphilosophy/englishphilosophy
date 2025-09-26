@@ -33,11 +33,7 @@ export default ({ text }: Props) => (
       )
       : null}
     {text.sourceDesc
-      ? (
-        <p>
-          <em>{text.sourceDesc}</em>
-        </p>
-      )
+      ? <p dangerouslySetInnerHTML={{ __html: text.sourceDesc }} />
       : null}
   </div>
 );
