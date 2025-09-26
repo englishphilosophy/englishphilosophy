@@ -1,4 +1,3 @@
-import healthcheck from "./handlers/healthcheck.ts";
 import search from "./handlers/search.ts";
 import text from "./handlers/text.ts";
 import texts from "./handlers/texts.ts";
@@ -16,22 +15,18 @@ const router = (request: Request) => {
   try {
     const url = new URL(request.url);
 
-    // healthcheck
-    if (url.pathname === "/") return healthcheck();
-
     // texts index
-    if (url.pathname === "/texts") return texts();
+    if (url.pathname === "/") return texts();
 
-    // text by id
-    const textMatch = url.pathname.match(/^\/texts\/(.+)/);
+    // individual text
+    const textMatch = url.pathname.match(/^\/(.+)/);
     if (textMatch) {
-      return text(textMatch[1], url.searchParams);
-    }
-
-    // search
-    const searchMatch = url.pathname.match(/^\/search\/(.+)/);
-    if (searchMatch) {
-      return search(searchMatch[1], url.searchParams);
+      const id = textMatch[1];
+      const isSearch = url.searchParams.get("regex") ||
+        url.searchParams.get("query");
+      return isSearch
+        ? search(id, url.searchParams)
+        : text(id, url.searchParams);
     }
 
     // 404
