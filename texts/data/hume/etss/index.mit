@@ -13,12 +13,12 @@ sourceDesc: >
   in 1753. Our copytext is the posthumous edition of 1777, which Hume was
   working on before he died, and which contains many final alterations.
 texts:
-  - Hume.ETSS.EMPL1
-  - Hume.ETSS.EMPL2
-  - Hume.ETSS.EHU
-  - Hume.ETSS.DP
-  - Hume.ETSS.EPM
-  - Hume.ETSS.NHR
+  - Hume.EMPL1
+  - Hume.EMPL2
+  - Hume.EHU
+  - Hume.DP
+  - Hume.EPM
+  - Hume.NHR
 ---
 {title}
 £1 ESSAYS £1
