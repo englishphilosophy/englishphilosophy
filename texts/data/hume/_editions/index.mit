@@ -1,0 +1,182 @@
+---
+texts:
+  - THN.1739-40
+  - A.1740
+  - EMPL1.1741
+  - EMPL1.1742a
+  - EMPL1.1742b
+  - LG.1745
+  - EMPL1.1748a
+  - EMPL1.1748b
+  - EHU.1748
+  - EHU.1750
+  - EPM.1751
+  - EMPL2.1752a
+  - EMPL2.1752b
+  - ETSS.1753
+    - EMPL1.1753
+    - EHU.1750 (old)
+    - EPM.1753
+    - EMPL2.1752b (old)
+  - ETSS.1754
+    - EMPL1.1753 (old)
+    - EHU.1750 (old)
+    - EPM.1753 (old)
+    - EMPL2.1754
+  - ETSS.1756
+    - EMPL1.1753 (old)
+    - EHU.1756
+    - EPM.1753 (old)
+    - EMPL2.1754 (old)
+  - FD.1757
+    - NHR.1757
+    - DP.1757
+    - Tr
+    - ST
+  - ETSS.1758
+    - EMPL1.1758
+    - EMPL2.1758
+    - EHU.1758
+    - DP.1758
+    - EPM.1758
+    - NHR.1758
+  - ETSS.1760
+    - EMPL1.1760
+    - EMPL2.1760
+    - EHU.1760
+    - DP.1760
+    - EPM.1760
+    - NHR.1760
+  - ETSS.1764
+    - EMPL1.1764
+    - EMPL2.1764
+    - EHU.1764
+    - DP.1764
+    - EPM.1764
+    - NHR.1764
+  - ETSS.1767
+    - EMPL1.1767
+    - EMPL2.1767
+    - EHU.1767
+    - DP.1767
+    - EPM.1767
+    - NHR.1767
+  - ETSS.1768
+    - EMPL1.1768
+    - EMPL2.1768
+    - EHU.1768
+    - DP.1768
+    - EPM.1768
+    - NHR.1768
+  - ETSS.1770
+    - EMPL1.1770
+    - EMPL2.1770
+    - EHU.1770
+    - DP.1770
+    - EPM.1770
+    - NHR.1770
+  - ETSS.1772
+    - EMPL1.1772
+    - EMPL2.1772
+    - EHU.1772
+    - DP.1772
+    - EPM.1772
+    - NHR.1772
+  - ETSS.1777
+    - EMPL1.1777
+    - EMPL2.1777
+    - EHU.1777
+    - DP.1777
+    - EPM.1777
+    - NHR.1777
+---
+
+  - 1739-40 THN      Treatise
+  - 1740    A        Abstract
+  - 1741    EMPL1[1]  Essays, Moral and Political
+  - 1742    EMPL1[2a] Essays, Moral and Political, 2nd edition
+  - 1742    EMPL1[2b] Essays, Moral and Political, volume 2
+  - 1745    LG       Letter from a Gentleman
+  - 1748    EMPL1[2c] Three Essays, Moral and Political, which completes the former edition
+  - 1748    EMPL1[3]  Essays, Moral and Political 3rd edition (now everything in one volume)
+  - 1748    EHU[1]    Philosophical Essays concerning Human Understanding
+  - 1750    EHU[2]    Philosophical Essays concerning Human Understanding, 2nd edition
+  - 1751    EPM[1]    An Enquiry concerning the Principles of Morals
+  - 1752    EMPL2[1]  Political Discourses
+  - 1752    EMPL2[2]  Political Discourses, 2nd edition
+  - 1753    ETSS[1]   Essays and Treatises on Several Subjects
+          - EMPL1[4]  Essays, Moral and Political, 4th edition
+          - EHU[2]    Philosophical Essays concerning Human Understanding, 2nd edition [NOT NEW]
+          - EPM[2]    An Enquiry concerning the Principles of Morals, 2nd edition
+          - EMPL2[2]  Political Discourses, 2nd edition [NOT NEW]
+  - 1754    ETSS[2]   Essays and Treatises on Several Subjects
+          - EMPL1[4]  Essays, Moral and Political, 4th edition [NOT NEW]
+          - EHU[2]    Philosophical Essays concerning Human Understanding, 2nd edition [NOT NEW]
+          - EPM[2]    An Enquiry concerning the Principles of Morals, 2nd edition [NOT NEW]
+          - EMPL2[3]  Political Discourses, 3rd edition
+  - 1756    ETSS[3]   Essays and Treatises on Several Subjects
+          - EMPL1[4]  Essays, Moral and Political, 4th edition [NOT NEW]
+          - EHU[3]    Philosophical Essays concerning Human Understanding, 3rd edition
+          - EPM[2]    An Enquiry concerning the Principles of Morals, 2nd edition [NOT NEW]
+          - EMPL2[3]  Political Discourses, 3rd edition [NOT NEW]
+  - 1757    FD       Four Dissertations
+          - NHR[1]    The Natural History of Religion
+          - DP[1]     A Dissertation on the Passions
+          - Tr       Of Tragedy
+          - ST       Of the Standard of Taste
+  - 1758    ETSS_4
+          - EMPL1_5  Essays, Moral, Political and Literary, Part 1
+          - EMPL2_4  Essays, Moral, Political and Literary, Part 2
+          - EHU_4    An Enquiry concerning Human Understanding
+          - DP_2     A Dissertation on the Passions
+          - EPM_3    An Enquiry concerning the Principles of Morals
+          - NHR_2    The Natural History of Religion
+  - 1760    ETSS_5
+          - EMPL1_6  Essays, Moral, Political and Literary, Part 1
+          - EMPL2_5  Essays, Moral, Political and Literary, Part 2
+          - EHU_5    An Enquiry concerning Human Understanding
+          - DP_3     A Dissertation on the Passions
+          - EPM_4    An Enquiry concerning the Principles of Morals
+          - NHR_3    The Natural History of Religion
+  - 1764    ETSS_6
+          - EMPL1_7  Essays, Moral, Political and Literary, Part 1
+          - EMPL2_6  Essays, Moral, Political and Literary, Part 2
+          - EHU_6    An Enquiry concerning Human Understanding
+          - DP_4     A Dissertation on the Passions
+          - EPM_5    An Enquiry concerning the Principles of Morals
+          - NHR_4    The Natural History of Religion
+  - 1767    ETSS_7
+          - EMPL1_8  Essays, Moral, Political and Literary, Part 1
+          - EMPL2_7  Essays, Moral, Political and Literary, Part 2
+          - EHU_7    An Enquiry concerning Human Understanding
+          - DP_5     A Dissertation on the Passions
+          - EPM_6    An Enquiry concerning the Principles of Morals
+          - NHR_5    The Natural History of Religion
+  - 1768    ETSS_8
+          - EMPL1_9  Essays, Moral, Political and Literary, Part 1
+          - EMPL2_8  Essays, Moral, Political and Literary, Part 2
+          - EHU_8    An Enquiry concerning Human Understanding
+          - DP_6     A Dissertation on the Passions
+          - EPM_7    An Enquiry concerning the Principles of Morals
+          - NHR_6    The Natural History of Religion
+  - 1770    ETSS_9
+          - EMPL1_10 Essays, Moral, Political and Literary, Part 1
+          - EMPL2_9  Essays, Moral, Political and Literary, Part 2
+          - EHU_9    An Enquiry concerning Human Understanding
+          - DP_7     A Dissertation on the Passions
+          - EPM_8    An Enquiry concerning the Principles of Morals
+          - NHR_7    The Natural History of Religion
+  - 1772    ETSS_10
+          - EMPL1_11 Essays, Moral, Political and Literary, Part 1
+          - EMPL2_10 Essays, Moral, Political and Literary, Part 2
+          - EHU_10   An Enquiry concerning Human Understanding
+          - DP_8     A Dissertation on the Passions
+          - EPM_9    An Enquiry concerning the Principles of Morals
+          - NHR_8    The Natural History of Religion
+  - 1777    ETSS_11
+          - EMPL1_12 Essays, Moral, Political and Literary, Part 1
+          - EMPL2_11 Essays, Moral, Political and Literary, Part 2
+          - EHU_11   An Enquiry concerning Human Understanding
+          - DP_9     A Dissertation on the Passions
+          - EPM_10   An Enquiry concerning the Principles of Morals
+          - NHR_9    The Natural History of Religion
