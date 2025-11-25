@@ -1,29 +1,37 @@
 ---
 imported: true
-id: Hume.EMPL2_1
-title: Political Discourses
-breadcrumb: Political Discourses
+id: Hume.EMPL2.1752a
+nextEdition: Hume.EMPL2.1752b
+title: Essays, Moral, Political, and Literary, Part II
+breadcrumb: Essays, Part 2
 published: [1752]
 texts:
-  - Hume.EMPL2_1.Co
-  - Hume.EMPL2_1.RA
-  - Hume.EMPL2_1.Mo
-  - Hume.EMPL2_1.In
-  - Hume.EMPL2_1.BT
-  - Hume.EMPL2_1.BP
-  - Hume.EMPL2_1.Ta
-  - Hume.EMPL2_1.PC
-  - Hume.EMPL2_1.RC
-  - Hume.EMPL2_1.PA
-  - Hume.EMPL2_1.PS
-  - Hume.EMPL2_1.IPC
+  - Hume.EMPL2.1752a.Co
+  - Hume.EMPL2.1752a.RA
+  - Hume.EMPL2.1752a.Mo
+  - Hume.EMPL2.1752a.In
+  - Hume.EMPL2.1752a.BT
+  - Hume.EMPL2.1752a.BP
+  - Hume.EMPL2.1752a.Ta
+  - Hume.EMPL2.1752a.PC
+  - Hume.EMPL2.1752a.RC
+  - Hume.EMPL2.1752a.PA
+  - Hume.EMPL2.1752a.PS
+  - Hume.EMPL2.1752a.IPC
 ---
 {title}
-£2 POLITICAL £2
-£1 DISCOURSES. £1
-£4 BY £4
-£4 DAVID HUME *esq.* £4
-£4 _EDINBURGH_, £4
-£6 Printed by *R. Fleming*, £6
-£6 For *A. Kincaid* and *A. Donaldson*. £6
-£6 M.DCC.LII. £6
+POLITICAL
+
+DISCOURSES.
+
+BY
+
+DAVID HUME ESQ.
+
+_EDINBURGH_,
+
+Printed by R. FLEMING,
+
+For A. KINCAID and A. DONALDSON.
+
+M.DCC.LII.

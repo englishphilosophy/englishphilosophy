@@ -1,26 +1,28 @@
 ---
 imported: true
-id: Hume.EMPL1_1
-title: Essays, Moral and Political
-breadcrumb: Essays, Moral and Political
+id: Hume.EMPL1.1741
+nextEdition: Hume.EMPL1.1742a
+title: Essays, Moral, Political, and Literary, Part I
+breadcrumb: Essays, Part 1
 published: [1741]
+copytext: [1741]
 texts:
-  - Hume.EMPL1_1.Ad
-  - Hume.EMPL1_1.DT
-  - Hume.EMPL1_1.LP
-  - Hume.EMPL1_1.IM
-  - Hume.EMPL1_1.PR
-  - Hume.EMPL1_1.FP
-  - Hume.EMPL1_1.LM
-  - Hume.EMPL1_1.SH
-  - Hume.EMPL1_1.IP
-  - Hume.EMPL1_1.BG
-  - Hume.EMPL1_1.PG
-  - Hume.EMPL1_1.PGB
-  - Hume.EMPL1_1.SE
-  - Hume.EMPL1_1.Av
-  - Hume.EMPL1_1.DM
-  - Hume.EMPL1_1.CL
+  - Hume.EMPL1.1741.Ad1
+  - Hume.EMPL1.1741.DT
+  - Hume.EMPL1.1741.LP
+  - Hume.EMPL1.1741.IM
+  - Hume.EMPL1.1741.PR
+  - Hume.EMPL1.1741.FP
+  - Hume.EMPL1.1741.LM
+  - Hume.EMPL1.1741.SH
+  - Hume.EMPL1.1741.IP
+  - Hume.EMPL1.1741.BG
+  - Hume.EMPL1.1741.PG
+  - Hume.EMPL1.1741.PGB
+  - Hume.EMPL1.1741.SE
+  - Hume.EMPL1.1741.Av
+  - Hume.EMPL1.1741.DM
+  - Hume.EMPL1.1741.CL
 ---
 {title}
 £1 ESSAYS, £1

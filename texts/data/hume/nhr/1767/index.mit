@@ -1,27 +1,28 @@
 ---
 imported: true
-id: Hume.ETSS.NHR.1767
+id: Hume.NHR.1767
+previousEdition: Hume.NHR.1764
+nextEdition: Hume.NHR.1768
 title: The Natural History of Religion
 breadcrumb: Natural History
-published: [1757]
-copytext: [1777]
+published: [1767]
 texts:
-  - Hume.ETSS.NHR.1767.Intro
-  - Hume.ETSS.NHR.1767.1
-  - Hume.ETSS.NHR.1767.2
-  - Hume.ETSS.NHR.1767.3
-  - Hume.ETSS.NHR.1767.4
-  - Hume.ETSS.NHR.1767.5
-  - Hume.ETSS.NHR.1767.6
-  - Hume.ETSS.NHR.1767.7
-  - Hume.ETSS.NHR.1767.8
-  - Hume.ETSS.NHR.1767.9
-  - Hume.ETSS.NHR.1767.10
-  - Hume.ETSS.NHR.1767.11
-  - Hume.ETSS.NHR.1767.12
-  - Hume.ETSS.NHR.1767.13
-  - Hume.ETSS.NHR.1767.14
-  - Hume.ETSS.NHR.1767.15
+  - Hume.NHR.1767.Intro
+  - Hume.NHR.1767.1
+  - Hume.NHR.1767.2
+  - Hume.NHR.1767.3
+  - Hume.NHR.1767.4
+  - Hume.NHR.1767.5
+  - Hume.NHR.1767.6
+  - Hume.NHR.1767.7
+  - Hume.NHR.1767.8
+  - Hume.NHR.1767.9
+  - Hume.NHR.1767.10
+  - Hume.NHR.1767.11
+  - Hume.NHR.1767.12
+  - Hume.NHR.1767.13
+  - Hume.NHR.1767.14
+  - Hume.NHR.1767.15
 ---
 {title}
 THE NATURAL HISTORY OF RELIGION.

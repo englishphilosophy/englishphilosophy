@@ -1,27 +1,28 @@
 ---
 imported: true
-id: Hume.ETSS.EMPL2.1767
+id: Hume.EMPL2.1767
+previousEdition: Hume.EMPL2.1764
+nextEdition: Hume.EMPL2.1768
 title: Essays, Moral, Political, and Literary, Part II
 breadcrumb: Essays, Part 2
-published: [1752]
-copytext: [1777]
+published: [1767]
 texts:
-  - Hume.ETSS.EMPL2.1767.Co
-  - Hume.ETSS.EMPL2.1767.RA
-  - Hume.ETSS.EMPL2.1767.Mo
-  - Hume.ETSS.EMPL2.1767.In
-  - Hume.ETSS.EMPL2.1767.BT
-  - Hume.ETSS.EMPL2.1767.JT
-  - Hume.ETSS.EMPL2.1767.BP
-  - Hume.ETSS.EMPL2.1767.Ta
-  - Hume.ETSS.EMPL2.1767.PC
-  - Hume.ETSS.EMPL2.1767.RC
-  - Hume.ETSS.EMPL2.1767.PA
-  - Hume.ETSS.EMPL2.1767.OC
-  - Hume.ETSS.EMPL2.1767.PO
-  - Hume.ETSS.EMPL2.1767.CP
-  - Hume.ETSS.EMPL2.1767.PS
-  - Hume.ETSS.EMPL2.1767.IPC
+  - Hume.EMPL2.1767.Co
+  - Hume.EMPL2.1767.RA
+  - Hume.EMPL2.1767.Mo
+  - Hume.EMPL2.1767.In
+  - Hume.EMPL2.1767.BT
+  - Hume.EMPL2.1767.JT
+  - Hume.EMPL2.1767.BP
+  - Hume.EMPL2.1767.Ta
+  - Hume.EMPL2.1767.PC
+  - Hume.EMPL2.1767.RC
+  - Hume.EMPL2.1767.PA
+  - Hume.EMPL2.1767.OC
+  - Hume.EMPL2.1767.PO
+  - Hume.EMPL2.1767.CP
+  - Hume.EMPL2.1767.PS
+  - Hume.EMPL2.1767.IPC
 ---
 {title}
 £1 ESSAYS, £1

@@ -1,9 +1,11 @@
 ---
 imported: true
 id: Hume.EHU.1777
+previousEdition: Hume.EHU.1772
+nextEdition: Hume.EHU
 title: Philosophical Essays concerning Human Understanding
 breadcrumb: First Enquiry
-published: [1756]
+published: [1777]
 texts:
   - Hume.EHU.1777.1
   - Hume.EHU.1777.2

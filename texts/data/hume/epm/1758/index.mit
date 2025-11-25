@@ -1,25 +1,24 @@
 ---
 imported: true
-id: Hume.ETSS.EPM.1758
+id: Hume.EPM.1758
+previousEdition: Hume.EPM.1753
+nextEdition: Hume.EPM.1760
 title: An Enquiry concerning the Principles of Morals
 breadcrumb: Moral Enquiry
-published: [1751]
-copytext: [1777]
+published: [1758]
 texts:
-  - Hume.ETSS.EPM.1758.1
-  - Hume.ETSS.EPM.1758.2
-  - Hume.ETSS.EPM.1758.3
-  - Hume.ETSS.EPM.1758.4
-  - Hume.ETSS.EPM.1758.5
-  - Hume.ETSS.EPM.1758.6
-  - Hume.ETSS.EPM.1758.7
-  - Hume.ETSS.EPM.1758.8
-  - Hume.ETSS.EPM.1758.9
-  - Hume.ETSS.EPM.1758.App1
-  - Hume.ETSS.EPM.1758.App2
-  - Hume.ETSS.EPM.1758.App3
-  - Hume.ETSS.EPM.1758.App4
-  - Hume.ETSS.EPM.1758.D
+  - Hume.EPM.1758.1
+  - Hume.EPM.1758.2
+  - Hume.EPM.1758.3
+  - Hume.EPM.1758.4
+  - Hume.EPM.1758.5
+  - Hume.EPM.1758.6
+  - Hume.EPM.1758.7
+  - Hume.EPM.1758.8
+  - Hume.EPM.1758.9
+  - Hume.EPM.1758.App1
+  - Hume.EPM.1758.App3
+  - Hume.EPM.1758.D
 ---
 {title}
 AN

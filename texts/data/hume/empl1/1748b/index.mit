@@ -1,36 +1,38 @@
 ---
 imported: true
-id: Hume.EMPL1_3
-title: Essays, Moral and Political
-breadcrumb: Essays, Moral and Political
+id: Hume.EMPL1.1748b
+previousEdition: Hume.EMPL1.1742b
+nextEdition: Hume.EMPL1.1753
+title: Essays, Moral, Political, and Literary, Part I
+breadcrumb: Essays, Part 1
 published: [1748]
 texts:
-  - Hume.EMPL1_3.DT
-  - Hume.EMPL1_3.LP
-  - Hume.EMPL1_3.IM
-  - Hume.EMPL1_3.PR
-  - Hume.EMPL1_3.FP
-  - Hume.EMPL1_3.LM
-  - Hume.EMPL1_3.SH
-  - Hume.EMPL1_3.IP
-  - Hume.EMPL1_3.BG
-  - Hume.EMPL1_3.PG
-  - Hume.EMPL1_3.PGB
-  - Hume.EMPL1_3.SE
-  - Hume.EMPL1_3.Av
-  - Hume.EMPL1_3.DM
-  - Hume.EMPL1_3.CL
-  - Hume.EMPL1_3.El
-  - Hume.EMPL1_3.RP
-  - Hume.EMPL1_3.Ep
-  - Hume.EMPL1_3.Sto
-  - Hume.EMPL1_3.Pl
-  - Hume.EMPL1_3.Sc
-  - Hume.EMPL1_3.PD
-  - Hume.EMPL1_3.SR
-  - Hume.EMPL1_3.NC
-  - Hume.EMPL1_3.OC
-  - Hume.EMPL1_3.PO
+  - Hume.EMPL1.1748b.DT
+  - Hume.EMPL1.1748b.LP
+  - Hume.EMPL1.1748b.IM
+  - Hume.EMPL1.1748b.PR
+  - Hume.EMPL1.1748b.FP
+  - Hume.EMPL1.1748b.LM
+  - Hume.EMPL1.1748b.SH
+  - Hume.EMPL1.1748b.IP
+  - Hume.EMPL1.1748b.BG
+  - Hume.EMPL1.1748b.PG
+  - Hume.EMPL1.1748b.PGB
+  - Hume.EMPL1.1748b.SE
+  - Hume.EMPL1.1748b.Av
+  - Hume.EMPL1.1748b.DM
+  - Hume.EMPL1.1748b.CL
+  - Hume.EMPL1.1748b.El
+  - Hume.EMPL1.1748b.RP
+  - Hume.EMPL1.1748b.Ep
+  - Hume.EMPL1.1748b.Sto
+  - Hume.EMPL1.1748b.Pl
+  - Hume.EMPL1.1748b.Sc
+  - Hume.EMPL1.1748b.PD
+  - Hume.EMPL1.1748b.SR
+  - Hume.EMPL1.1748b.NC
+  - Hume.EMPL1.1748b.OC
+  - Hume.EMPL1.1748b.PO
 ---
 {title}
 £1 ESSAYS, £1

@@ -1,8 +1,10 @@
 ---
 imported: true
-id: Hume.EMPL1_2b
-title: Essays, Moral and Political, vol 2
-breadcrumb: Essays, Moral and Political, vol 2
+id: Hume.EMPL1.1742b
+previousEdition: Hume.EMPL1.1742a
+nextEdition: Hume.EMPL1.1748b
+title: Essays, Moral, Political, and Literary, Part I
+breadcrumb: Essays, Part 1
 published: [1742]
 texts:
   - Hume.EMPL1.1742b.Ad1

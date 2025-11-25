@@ -1,13 +1,14 @@
 ---
 imported: true
-id: Hume.EMPL1_2c
-title: Three Essays, Moral and Political
-breadcrumb: Three Essays, Moral and Political
+id: Hume.EMPL1.1748a
+nextEdition: Hume.EMPL1.1748b
+title: Essays, Moral, Political, and Literary, Part I
+breadcrumb: Essays, Part 1
 published: [1748]
 texts:
-  - Hume.EMPL1_2c.NC
-  - Hume.EMPL1_2c.OC
-  - Hume.EMPL1_2c.PO
+  - Hume.EMPL1.1748a.NC
+  - Hume.EMPL1.1748a.OC
+  - Hume.EMPL1.1748a.PO
 ---
 {title}
 £2 THREE ESSAYS, £2
