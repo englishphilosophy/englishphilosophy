@@ -1,11 +1,11 @@
 ---
-imported: true
 id: Hume.EMPL2.1752b
 previousEdition: Hume.EMPL2.1752a
 nextEdition: Hume.EMPL2.1754
 title: Essays, Moral, Political, and Literary, Part II
 breadcrumb: Essays, Part 2
 published: [1752]
+copytext: [1752b]
 texts:
   - Hume.EMPL2.1752b.Co
   - Hume.EMPL2.1752b.RA

@@ -1,11 +1,11 @@
 ---
-imported: true
 id: Hume.NHR.1760
 previousEdition: Hume.NHR.1758
 nextEdition: Hume.NHR.1764
 title: The Natural History of Religion
 breadcrumb: Natural History
-published: [1760]
+published: [1757]
+copytext: [1760]
 texts:
   - Hume.NHR.1760.Intro
   - Hume.NHR.1760.1

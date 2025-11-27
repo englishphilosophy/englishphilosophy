@@ -1,11 +1,11 @@
 ---
-imported: true
 id: Hume.EMPL1.1768
 previousEdition: Hume.EMPL1.1767
 nextEdition: Hume.EMPL1.1770
 title: Essays, Moral, Political, and Literary, Part I
 breadcrumb: Essays, Part 1
-published: [1768]
+published: [1741, 1742, 1748, 1757]
+copytext: [1768]
 texts:
   - Hume.EMPL1.1768.DT
   - Hume.EMPL1.1768.LP
