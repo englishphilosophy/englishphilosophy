@@ -5,7 +5,8 @@ previousEdition: Hume.EPM.1751
 nextEdition: Hume.EPM.1758
 title: An Enquiry concerning the Principles of Morals
 breadcrumb: Moral Enquiry
-published: [1753]
+published: [1751, 1764]
+copytext: [1753]
 texts:
   - Hume.EPM.1753.1
   - Hume.EPM.1753.2
