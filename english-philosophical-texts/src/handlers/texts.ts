@@ -1,7 +1,7 @@
 import { getIndex } from "@englishphilosophy/texts";
-import response from "../utils/response.ts";
+import jsonResponse from "../utils/jsonResponse.ts";
 
 export default async (): Promise<Response> => {
   const index = await getIndex();
-  return response("data", index);
+  return jsonResponse("data", index);
 };

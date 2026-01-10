@@ -13,10 +13,10 @@ test("`/` returns index", async () => {
 });
 
 test("`/:author` returns author", async () => {
-  const { response, payload } = await get("/");
+  const { payload } = await get("/");
 
   for (const child of payload.data.children) {
-    const { payload } = await get(`/${child.id}`);
+    const { response, payload } = await get(`/${child.id}`);
     if ("error" in payload) {
       throw new Error(`Error fetching author ${child.id}: ${payload.error}`);
     }
@@ -42,6 +42,8 @@ test("`/:author/:text` returns text", async () => {
         throw new Error(`Error fetching text ${text.id}: ${payload.error}`);
       }
 
+      // note we only test the response for the top-level text, not it's children
+      // otherwise this test would take ages
       assertEquals(payload.data.id, text.id);
       assertEquals(response.status, 200);
     }

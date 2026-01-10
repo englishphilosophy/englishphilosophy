@@ -18,6 +18,10 @@ export type Text = Markit<TextData, TextData, BlockData> & {
   previous?: AuthorStub | TextStub;
 };
 
+export type FullText = Text & {
+  children: FullText[];
+};
+
 export type AuthorStub = Stub<AuthorData>;
 
 export type TextStub = Stub<TextData>;
