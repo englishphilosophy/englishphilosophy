@@ -1,20 +1,26 @@
 import { getText } from "@englishphilosophy/texts";
-import response from "../utils/response.ts";
+import type { TextOptions } from "../types.ts";
+import jsonResponse from "../utils/jsonResponse.ts";
+import resolveChildren from "../utils/resolveChildren.ts";
+import flattenText from "../utils/flattenText.ts";
+import textResponse from "../utils/textResponse.ts";
 
-export default async (
-  id: string,
-  searchParams: URLSearchParams,
-): Promise<Response> => {
-  const format = searchParams.get("format") ?? "html";
-  if (format !== "markit" && format !== "text" && format !== "html") {
-    return response(
-      "error",
-      "Invalid format requested. Options are 'markit', 'text', or 'html'.",
-      400,
-    );
+export default async (id: string, options: TextOptions): Promise<Response> => {
+  const text = await getText(id, options.format, options.normalized);
+
+  if (text === undefined) {
+    return jsonResponse("error", "Not found", 404);
   }
-
-  const normalized = searchParams.get("normalized") !== null;
-  const text = await getText(id, format, normalized);
-  return text ? response("data", text) : response("error", "Not found", 404);
+  if (options.full && options.flat) {
+    const fullText = await resolveChildren(text, options);
+    return textResponse(flattenText(fullText));
+  }
+  if (options.full) {
+    const fullText = await resolveChildren(text, options);
+    return jsonResponse("data", fullText);
+  }
+  if (options.flat) {
+    return textResponse(flattenText(text));
+  }
+  return jsonResponse("data", text);
 };

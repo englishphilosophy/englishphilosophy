@@ -1,5 +1,5 @@
 import { getMatches, getPath } from "@englishphilosophy/texts";
-import response from "../utils/response.ts";
+import jsonResponse from "../utils/jsonResponse.ts";
 
 export default async (
   id: string,
@@ -7,16 +7,16 @@ export default async (
 ): Promise<Response> => {
   const path = await getPath(id);
   if (!path) {
-    return response("error", "Text not found", 404);
+    return jsonResponse("error", "Text not found", 404);
   }
 
   const searchOptions = getSearchOptions(searchParams);
   if (typeof searchOptions === "string") {
-    return response("error", searchOptions, 400);
+    return jsonResponse("error", searchOptions, 400);
   }
 
   const matches = await getMatches(id, searchOptions);
-  return response("data", matches);
+  return jsonResponse("data", matches);
 };
 
 const getSearchOptions = (searchParams: URLSearchParams) => {

@@ -1,4 +1,4 @@
-import { assertEquals } from "@std/assert";
+import { assert, assertEquals } from "@std/assert";
 import { test } from "@std/testing/bdd";
 import client from "../src/client.ts";
 import server from "../src/server.ts";
@@ -64,4 +64,28 @@ test("`/:author/:text?normalized` returns text with normalized spelling", async 
   }
 
   assertEquals(payload.data.blocks[9].text, expectedText);
+});
+
+test("`/:author/:text?full returns the full text (with children)", async () => {
+  const expectedText =
+    "<p>Reading the other day the Third Volume of your excellent Discourses, as I do every thing you Write with great Pleasure and no less Advantage; yet taking the liberty that I use with other Books, (and yours or no bodies will bear it) to raise all the Objections that ever I can, and to make them undergo the severest Test my Thoughts can put 'em to before they pass for currant, a difficulty arose which without your assistance I know not how to solve.</p>";
+
+  const { payload } = await get("/astell/llg?full");
+  if ("error" in payload) {
+    throw new Error("Error fetching `/astell/spl?full`");
+  }
+
+  assertEquals(payload.data.children[1].blocks[2].text, expectedText);
+});
+
+test("`/:author/:text?flat` returns plain text response", async () => {
+  const expectedStartText =
+    "<h1>LETTERS</h1><h3>Concerning the</h3><h1>Love of GOD,</h1><h4>Between the Author of the</h4><h3>Proposal to the <strong>Ladies</strong></h3><h4><strong>and</strong></h4><h3>Mr. <em>JOHN NORRIS:</em></h3><p>Wherein his late Discourse, shewing, That it ought to be intire and exclusive of all other Loves, is further Cleared and Justified.</p>";
+
+  const { payload } = await get("/astell/llg?flat");
+  if (typeof payload !== "string") {
+    throw new Error("Error fetching `/astell/spl?flat`");
+  }
+
+  assert(payload.startsWith(expectedStartText));
 });
