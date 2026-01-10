@@ -27,20 +27,32 @@ jobs:
       - name: Clone repository
         uses: actions/checkout@v4
 
+      - name: Check for changes
+        uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          filters: |
+            project:
+              - '${{ matrix.project }}/**'
+
       - name: Install Deno
+        if: steps.changes.outputs.project == 'true'
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
           cache: true
 
       - name: Run tests
+        if: steps.changes.outputs.project == 'true'
         working-directory: ./${{ matrix.project }}
         run: deno task test
 
       - name: Run linter
+        if: steps.changes.outputs.project == 'true'
         working-directory: ./${{ matrix.project }}
         run: deno task lint
 
       - name: Check formatting
+        if: steps.changes.outputs.project == 'true'
         working-directory: ./${{ matrix.project }}
         run: deno task fmt
