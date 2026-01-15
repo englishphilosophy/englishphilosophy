@@ -1,0 +1,17 @@
+{
+  "Add title ID": {
+    "prefix": "id",
+    "body": ["{title} "],
+    "description": "Add a title ID to the current block"
+  },
+  "Add paragraph ID": {
+    "prefix": "id",
+    "body": ["{#${1:1}} "],
+    "description": "Add a paragraph ID to the current block"
+  },
+  "Add note ID": {
+    "prefix": "n",
+    "body": ["{#n${1:1}} "],
+    "description": "Add a note ID to the current block"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "markit-language",
+  "displayName": "Markit Language Support",
+  "description": "Language support for Markit (.mit) files",
+  "version": "1.0.0",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "type": "module",
+  "main": "./extension.js",
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "markit",
+        "aliases": [
+          "Markit",
+          "markit"
+        ],
+        "extensions": [
+          ".mit"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "markit",
+        "scopeName": "text.markit",
+        "path": "./syntaxes/markit.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "markit",
+        "path": "./snippets/markit.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "markit.insertNextParagraphId",
+        "title": "Insert Next Paragraph ID"
+      },
+      {
+        "command": "markit.insertNextNoteId",
+        "title": "Insert Next Note ID"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "markit.insertNextParagraphId",
+        "key": "ctrl+shift+p",
+        "mac": "cmd+shift+p",
+        "when": "editorTextFocus && editorLangId == markit"
+      },
+      {
+        "command": "markit.insertNextNoteId",
+        "key": "ctrl+shift+n",
+        "mac": "cmd+shift+n",
+        "when": "editorTextFocus && editorLangId == markit"
+      }
+    ]
+  }
+}
