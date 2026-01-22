@@ -2,7 +2,10 @@ import validateContent from "./content.ts";
 
 export default (id: string, body: string): string[] =>
   body.length > 0
-    ? body.split("\n\n").flatMap((text) => validateBlock(id, text))
+    ? body
+        .replace(/\n{3,}/g, "\n\n")
+        .split("\n\n")
+        .flatMap((text) => validateBlock(id, text))
     : [];
 
 const validateBlock = (id: string, text: string): string[] => {
