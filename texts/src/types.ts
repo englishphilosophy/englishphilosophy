@@ -48,6 +48,8 @@ export type TextData = {
   title: string;
   author: AuthorDetails;
   breadcrumb: string;
+  previousEdition?: string;
+  nextEdition?: string;
   published?: number[];
   copytext?: number[];
   sourceUrl?: string;
