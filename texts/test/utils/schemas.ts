@@ -53,6 +53,8 @@ export const textStubSchema: JSONSchemaType<TextStub> = {
     imported: { type: "boolean", nullable: true },
     title: { type: "string" },
     author: authorDetailsSchema,
+    previousEdition: { type: "string", nullable: true },
+    nextEdition: { type: "string", nullable: true },
     breadcrumb: { type: "string" },
     published: { type: "array", items: { type: "number" }, nullable: true },
     copytext: { type: "array", items: { type: "number" }, nullable: true },
