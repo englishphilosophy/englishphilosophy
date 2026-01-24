@@ -38,6 +38,6 @@ test("`/index.js` returns JS", async () => {
 
 test("`/` returns index", async () => {
   const { response, body } = await request("/");
-  assertStringIncludes(body, "<h1 class=\"text-3xl\">Hume Texts Online</h1>");
+  assertStringIncludes(body, '<h1 class="text-3xl">Hume Texts Online</h1>');
   assertEquals(response.status, 200);
 });
