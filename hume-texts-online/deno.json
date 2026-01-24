@@ -1,0 +1,28 @@
+{
+  "name": "@englishphilosophy/hume-texts-online",
+  "version": "0.0.1",
+  "license": "MIT",
+  "exports": "./mod.ts",
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "preact"
+  },
+  "tasks": {
+    "build": "deno bundle --minify --output=./.build/index.js src/client/index.ts",
+    "build:watch": "deno task build --watch",
+    "dev": "deno task build:watch & PORT=3002 BASE_DIR=. TEXTS_DIR=../texts/data deno run --watch --allow-env --allow-ffi --allow-read --allow-write --allow-net --unstable-bundle bin/serve.ts",
+    "start": "deno run --allow-env --allow-read --allow-write --allow-net bin/serve.ts",
+    "test": "deno task build && BASE_DIR=. TEXTS_DIR=../texts/data deno test --allow-run --allow-env --allow-ffi --allow-read --allow-write --allow-net --unstable-bundle",
+    "test:watch": "deno task build:watch & deno task test --watch",
+    "lint": "deno lint",
+    "lint:watch": "deno task lint --watch",
+    "fmt": "deno fmt --check",
+    "fmt:watch": "deno task fmt --watch",
+    "fmt:fix": "deno fmt"
+  },
+  "imports": {
+    "lightningcss-wasm": "npm:lightningcss-wasm@^1.30.1",
+    "preact": "npm:preact@^10.27.2",
+    "preact-render-to-string": "npm:preact-render-to-string@^6.6.1"
+  }
+}

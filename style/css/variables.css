@@ -1,0 +1,31 @@
+:root {
+  /* colors */
+  --blue: #3277ae;
+  --red: #920000;
+  --white: #fcfcfc;
+  --beige: #f5f5dc;
+  --lightgray: #f5f5f5;
+  --mediumgray: #ececec;
+  --gray: #ddd;
+  --darkgray: #8e8e8e;
+  --black: #363636;
+  --transblack: rgba(20, 20, 20, 0.8);
+  /* fonts */
+  --sans:
+    -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  --serif: "IM Fell English", "GFS Didot", times, serif;
+  --serif-sc: "IM Fell English SC", "GFS Didot", times, serif;
+  --greek: "GFS Didot";
+  /* shadows */
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  /* break-points */
+  --container-sm: 24rem;
+  --container-md: 48rem;
+  --container-lg: 64rem;
+  --container-xl: 80rem;
+}

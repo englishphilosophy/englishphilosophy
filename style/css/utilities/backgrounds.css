@@ -1,0 +1,43 @@
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+.bg-red {
+  background-color: var(--red);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-beige {
+  background-color: var(--beige);
+}
+
+.bg-lightgray {
+  background-color: var(--lightgray);
+}
+
+.bg-mediumgray {
+  background-color: var(--mediumgray);
+}
+
+.bg-gray {
+  background-color: var(--gray);
+}
+
+.bg-darkgray {
+  background-color: var(--darkgray);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-transblack {
+  background-color: var(--transblack);
+}

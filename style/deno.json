@@ -1,0 +1,21 @@
+{
+  "name": "@englishphilosophy/style",
+  "version": "0.0.1",
+  "license": "MIT",
+  "exports": "./mod.ts",
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "preact"
+  },
+  "tasks": {
+    "test": "deno check",
+    "lint": "deno lint",
+    "lint:watch": "deno task lint --watch",
+    "fmt": "deno fmt --check",
+    "fmt:watch": "deno task fmt --watch",
+    "fmt:fix": "deno fmt"
+  },
+  "imports": {
+    "preact": "npm:preact@^10.27.2"
+  }
+}

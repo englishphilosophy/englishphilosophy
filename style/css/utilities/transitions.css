@@ -1,0 +1,19 @@
+.transition {
+  transition: all 300ms ease-in-out;
+}
+
+.transition-none {
+  transition: none;
+}
+
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
