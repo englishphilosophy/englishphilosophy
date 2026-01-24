@@ -14,7 +14,9 @@ jobs:
           dictionary,
           english-philosophical-texts,
           english-philosophical-texts-online,
+          hume-texts-online,
           markit,
+          style,
           texts,
         ]
 
