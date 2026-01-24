@@ -2,7 +2,7 @@ import type { VNode } from "preact";
 import { Footer, Header, Main } from "@englishphilosophy/style";
 
 type Props = {
-  section: "texts" | "about";
+  section?: "texts" | "about";
   children: VNode | VNode[];
 };
 
