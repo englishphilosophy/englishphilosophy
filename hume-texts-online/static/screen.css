@@ -1,0 +1,8 @@
+@import "../../style/css/fonts.css";
+@import "../../style/css/variables.css";
+@import "../../style/css/reset.css";
+@import "../../style/css/utilities.css";
+
+:root {
+  --primary: var(--red);
+}
