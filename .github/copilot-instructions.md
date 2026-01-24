@@ -24,6 +24,13 @@ This is a monorepo for English philosophical texts and related tooling.
   - User interface for browsing and searching texts
   - Static site with server-side rendering
 
+- **hume-texts-online/** - Dedicated frontend for Hume's texts
+  - Focused on David Hume's works
+  - Similar architecture to the main online frontend
+
+- **style** - Shared CSS and components for web frontends
+  - Uses manually curated Tailwind-style utility classes
+
 ## Tech Stack
 
 - **Runtime:** Deno (not Node.js)
