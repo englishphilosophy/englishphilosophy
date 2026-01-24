@@ -1,0 +1,171 @@
+.border {
+  border: 1px solid;
+}
+
+.border-2 {
+  border: 2px solid;
+}
+
+.border-3 {
+  border: 3px solid;
+}
+
+.border-4 {
+  border: 4px solid;
+}
+
+.border-t {
+  border-top: 1px solid;
+}
+
+.border-t-2 {
+  border-top: 2px solid;
+}
+
+.border-t-3 {
+  border-top: 3px solid;
+}
+
+.border-t-4 {
+  border-top: 4px solid;
+}
+
+.border-r {
+  border-right: 1px solid;
+}
+
+.border-r-2 {
+  border-right: 2px solid;
+}
+
+.border-r-3 {
+  border-right: 3px solid;
+}
+
+.border-r-4 {
+  border-right: 4px solid;
+}
+
+.border-b {
+  border-bottom: 1px solid;
+}
+
+.border-b-2 {
+  border-bottom: 2px solid;
+}
+
+.border-b-3 {
+  border-bottom: 3px solid;
+}
+
+.border-b-4 {
+  border-bottom: 4px solid;
+}
+
+.border-l {
+  border-left: 1px solid;
+}
+
+.border-l-2 {
+  border-left: 2px solid;
+}
+
+.border-l-3 {
+  border-left: 3px solid;
+}
+
+.border-l-4 {
+  border-left: 4px solid;
+}
+
+.border-transparent {
+  border-color: transparent;
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+.border-blue {
+  border-color: var(--blue);
+}
+
+.border-red {
+  border-color: var(--red);
+}
+
+.border-white {
+  border-color: var(--white);
+}
+
+.border-beige {
+  border-color: var(--beige);
+}
+
+.border-lightgray {
+  border-color: var(--lightgray);
+}
+
+.border-mediumgray {
+  border-color: var(--mediumgray);
+}
+
+.border-gray {
+  border-color: var(--gray);
+}
+
+.border-darkgray {
+  border-color: var(--darkgray);
+}
+
+.border-black {
+  border-color: var(--black);
+}
+
+.border-transblack {
+  border-color: var(--transblack);
+}
+
+.hover\:border-primary:hover {
+  border-color: var(--primary);
+}
+
+.hover\:border-blue:hover {
+  border-color: var(--blue);
+}
+
+.hover\:border-red:hover {
+  border-color: var(--red);
+}
+
+.hover\:border-white:hover {
+  border-color: var(--white);
+}
+
+.hover\:border-beige:hover {
+  border-color: var(--beige);
+}
+
+.hover\:border-lightgray:hover {
+  border-color: var(--lightgray);
+}
+
+.hover\:border-mediumgray:hover {
+  border-color: var(--mediumgray);
+}
+
+.hover\:border-gray:hover {
+  border-color: var(--gray);
+}
+
+.hover\:border-darkgray:hover {
+  border-color: var(--darkgray);
+}
+
+.hover\:border-black:hover {
+  border-color: var(--black);
+}
+
+.hover\:border-transblack:hover {
+  border-color: var(--transblack);
+}
