@@ -13,6 +13,7 @@
     "fmt:fix": "deno fmt"
   },
   "imports": {
-    "ajv": "npm:ajv@^8.17.1"
+    "ajv": "npm:ajv@^8.17.1",
+    "diff": "npm:diff@^8.0.3"
   }
 }

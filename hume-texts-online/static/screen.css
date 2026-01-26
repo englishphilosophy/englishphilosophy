@@ -6,3 +6,12 @@
 :root {
   --primary: var(--red);
 }
+
+ins {
+  background-color: aquamarine;
+}
+
+del {
+  text-decoration: line-through;
+  background-color: lightcoral;
+}

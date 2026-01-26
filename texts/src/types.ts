@@ -2,6 +2,7 @@ import type {
   Block as MarkitBock,
   Markit,
   Stub,
+  Format,
 } from "@englishphilosophy/markit";
 
 export type Index = {
@@ -59,6 +60,12 @@ export type TextData = {
 export type BlockData = {
   pages?: string;
   speaker?: string;
+};
+
+export type GetTextOptions = {
+  format: Format;
+  normalized: boolean;
+  diffWith: string | null;
 };
 
 export type SearchOptions = TextSearchOptions | RegexSearchOptions;

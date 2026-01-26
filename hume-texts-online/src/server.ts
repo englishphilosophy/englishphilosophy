@@ -15,7 +15,7 @@ export default async (port = 0): Promise<string> => {
 };
 
 const handler = (request: Request) => {
-  const { pathname } = new URL(request.url);
+  const { pathname, searchParams } = new URL(request.url);
 
   try {
     // assets
@@ -30,7 +30,8 @@ const handler = (request: Request) => {
 
     // text pages
     const id = pathname.slice(1).replace(/\//g, ".");
-    if (id) return text(id);
+    const diff = searchParams.get("diff");
+    if (id) return text(id, diff);
 
     // 404 otherwise
     return notFound();
