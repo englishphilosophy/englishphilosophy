@@ -20,7 +20,9 @@ test("index matches schema", async () => {
   const index = await getIndex();
   assert(
     validateIndex(index),
-    validateIndex.errors ? validateIndex.errors[0].message : undefined,
+    validateIndex.errors
+      ? `Index is invalid:\n${JSON.stringify(validateIndex.errors, null, 2)}`
+      : undefined,
   );
 });
 
@@ -35,7 +37,7 @@ test("all authors match schema", async () => {
     assert(
       validateAuthor(author),
       validateAuthor.errors
-        ? `Author ${child.id} is invalid: ${validateAuthor.errors![0].message}`
+        ? `Author ${child.id} is invalid:\n${JSON.stringify(validateAuthor.errors, null, 2)}`
         : undefined,
     );
   }
@@ -60,7 +62,7 @@ test("all texts match schema", async () => {
       assert(
         validateText(text),
         validateText.errors
-          ? `Text ${child.id} is invalid: ${validateText.errors[0].message}`
+          ? `Text ${child.id} is invalid:\n${JSON.stringify(validateText.errors, null, 2)}`
           : undefined,
       );
     }
