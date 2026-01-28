@@ -15,7 +15,7 @@ export default (
 ): Markit => {
   const { head, body } = splitContent(content);
 
-  const stub = compileStub(head, context);
+  const stub = compileStub(head, context, format);
   const blocks = compileBlocks(stub.id, body, format);
   const children = getChildren(stub, context);
   const ancestors = getAncestors(stub.id, context);
@@ -29,9 +29,9 @@ export default (
   return removeTexts(result);
 };
 
-export const compileBaseStub = (content: string): Stub => {
+export const compileBaseStub = (content: string, format: Format): Stub => {
   const { head } = splitContent(content);
-  return compileStub(head, []);
+  return compileStub(head, [], format);
 };
 
 export const splitContent = (content: string) => {

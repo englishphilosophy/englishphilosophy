@@ -59,6 +59,6 @@ export const readContext = (mits: string[]): Promise<Stub[]> =>
   Promise.all(
     mits.map(async (mit) => {
       const content = await Deno.readTextFile(mit);
-      return compileBaseStub(content);
+      return compileBaseStub(content, "markit");
     }),
   );
