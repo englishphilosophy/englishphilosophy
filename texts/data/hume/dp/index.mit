@@ -1,11 +1,21 @@
 ---
 imported: true
 id: Hume.DP
-previousEdition: Hume.DP.1777
+edition: Hume.DP
 title: A Dissertation on the Passions
 breadcrumb: Dissertation on the Passions
 published: [1757]
 copytext: [1777]
+editions:
+  - Hume.DP.1757
+  - Hume.DP.1758
+  - Hume.DP.1760
+  - Hume.DP.1764
+  - Hume.DP.1767
+  - Hume.DP.1768
+  - Hume.DP.1770
+  - Hume.DP.1772
+  - Hume.DP.1777
 texts:
   - Hume.DP.1
   - Hume.DP.2
