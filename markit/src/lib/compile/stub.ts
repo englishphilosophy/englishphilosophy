@@ -10,10 +10,9 @@ export default (head: string, context: Stub[], format: Format): Stub => {
     for (const [key, value] of Object.entries(metadata)) {
       if (key !== "id" && typeof value === "string") {
         // format text fields (apart from the ID)
-        stub[key] =
-          format === "markit"
-            ? value.trim()
-            : innerContent(value.trim(), format);
+        stub[key] = format === "markit"
+          ? value.trim()
+          : innerContent(value.trim(), format);
       } else {
         // assign other fields directly
         stub[key] = value;
