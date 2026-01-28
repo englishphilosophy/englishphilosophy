@@ -9,7 +9,7 @@ export default async (
 ): Promise<Stub[]> => {
   // optionally clear the context cache
   if (clearContextCache) {
-    Deno.remove(`${directory}/.cache/context.json`).catch(() => {});
+    await Deno.remove(`${directory}/.cache/context.json`).catch(() => {});
   }
 
   // if there's no context directory, there's no context
