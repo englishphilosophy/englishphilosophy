@@ -50,4 +50,4 @@ This is a monorepo for English philosophical texts and related tooling.
 
 - This is historical text preservation work
 - Text accuracy and fidelity to original sources is critical
-- MarkIt format (.mit) is custom to this project
+- Markit format (.mit) is custom to this project, but similar in spirit to Markdown
