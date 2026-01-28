@@ -1,11 +1,22 @@
 ---
 imported: true
 id: Hume.EHU
-previousEdition: Hume.EHU.1777
 title: An Enquiry concerning Human Understanding
 breadcrumb: First Enquiry
 published: [1748]
 copytext: [1777]
+editions:
+  - Hume.EHU.1748
+  - Hume.EHU.1750
+  - Hume.EHU.1756
+  - Hume.EHU.1758
+  - Hume.EHU.1760
+  - Hume.EHU.1764
+  - Hume.EHU.1767
+  - Hume.EHU.1768
+  - Hume.EHU.1770
+  - Hume.EHU.1772
+  - Hume.EHU.1777
 texts:
   - Hume.EHU.1
   - Hume.EHU.2

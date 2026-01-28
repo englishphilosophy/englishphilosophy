@@ -1,11 +1,22 @@
 ---
 imported: true
 id: Hume.EPM
-previousEdition: Hume.EPM.1777
+edition: Hume.EPM
 title: An Enquiry concerning the Principles of Morals
 breadcrumb: Moral Enquiry
 published: [1751, 1764]
 copytext: [1777]
+editions:
+  - Hume.EPM.1751
+  - Hume.EPM.1753
+  - Hume.EPM.1758
+  - Hume.EPM.1760
+  - Hume.EPM.1764
+  - Hume.EPM.1767
+  - Hume.EPM.1768
+  - Hume.EPM.1770
+  - Hume.EPM.1772
+  - Hume.EPM.1777
 texts:
   - Hume.EPM.1
   - Hume.EPM.2
