@@ -37,7 +37,9 @@ test("all authors match schema", async () => {
     assert(
       validateAuthor(author),
       validateAuthor.errors
-        ? `Author ${child.id} is invalid:\n${JSON.stringify(validateAuthor.errors, null, 2)}`
+        ? `Author ${child.id} is invalid:\n${
+          JSON.stringify(validateAuthor.errors, null, 2)
+        }`
         : undefined,
     );
   }
@@ -62,7 +64,9 @@ test("all texts match schema", async () => {
       assert(
         validateText(text),
         validateText.errors
-          ? `Text ${child.id} is invalid:\n${JSON.stringify(validateText.errors, null, 2)}`
+          ? `Text ${child.id} is invalid:\n${
+            JSON.stringify(validateText.errors, null, 2)
+          }`
           : undefined,
       );
     }
