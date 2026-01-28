@@ -48,15 +48,19 @@ export type TextData = {
   title: string;
   author: AuthorDetails;
   breadcrumb: string;
-  previousEdition?: string;
-  nextEdition?: string;
   published?: number[];
   copytext?: number[];
+  edition?: string;
+  editions?: string[];
+  previousEdition?: string;
+  nextEdition?: string;
   sourceUrl?: string;
   sourceDesc?: string;
 };
 
 export type BlockData = {
+  title?: string;
+  subsection?: string;
   pages?: string;
   speaker?: string;
 };
