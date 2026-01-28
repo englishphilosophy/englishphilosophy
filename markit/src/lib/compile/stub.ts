@@ -1,13 +1,22 @@
 import { parse } from "@std/yaml";
-import type { Stub } from "../../types.ts";
+import type { Format, Stub } from "../../types.ts";
+import { innerContent } from "./blocks/content.ts";
 import { getParent } from "./context.ts";
 
-export default (head: string, context: Stub[]): Stub => {
+export default (head: string, context: Stub[], format: Format): Stub => {
   const stub: Stub = { id: "" };
   try {
     const metadata = parse(head) as Record<string, unknown>;
     for (const [key, value] of Object.entries(metadata)) {
-      stub[key] = typeof value === "string" ? value.trim() : value;
+      if (key !== "id" && typeof value === "string") {
+        // format text fields (apart from the ID)
+        stub[key] = format === "markit"
+          ? value.trim()
+          : innerContent(value.trim(), format);
+      } else {
+        // assign other fields directly
+        stub[key] = value;
+      }
     }
   } catch {
     // ignore errors (handled by separate validate function)

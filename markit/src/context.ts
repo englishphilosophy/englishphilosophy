@@ -9,7 +9,7 @@ export default async (
 ): Promise<Stub[]> => {
   // optionally clear the context cache
   if (clearContextCache) {
-    Deno.remove(`${directory}/.cache/context.json`).catch(() => {});
+    await Deno.remove(`${directory}/.cache/context.json`).catch(() => {});
   }
 
   // if there's no context directory, there's no context
@@ -59,6 +59,6 @@ export const readContext = (mits: string[]): Promise<Stub[]> =>
   Promise.all(
     mits.map(async (mit) => {
       const content = await Deno.readTextFile(mit);
-      return compileBaseStub(content);
+      return compileBaseStub(content, "markit");
     }),
   );
